@@ -3,6 +3,9 @@
   "version": "1.0",
   "manifest_version": 2,
   "description": "这里是插件的描述",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": [
@@ -10,8 +13,11 @@
       ],
       "run_at": "document_start",
       "js": [
-        "./spider/saveJsObjToFile.js",
-        "./spider/queryTicket.js"
+        "./tool/console.save.js",
+        "./tool/String.prototype.hmToMs.js",
+        "./spider/queryTicket.js",
+        "./spider/initializeStationDictionary.js",
+        "./spider/run.js"
       ]
     }
   ]

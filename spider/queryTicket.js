@@ -1,8 +1,16 @@
-// 一些工具函数
-const Rare = {
-  stationDictionary: {
-    "北京": "BJP",
-    "南京": "NJH",
+// 打开页面 https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc
+// 使用此对象进行查询
+const query12306 = {
+  stationDictionary: {}, // 在 initializeStationDictionary.js 中初始化
+  queryAll: function () {
+    const keys = Object.keys(this.stationDictionary)
+    let [iFrom, iTo] = [0, 1]
+    for (; iFrom < keys.length - 1; iFrom++) {
+      for (; iTo < keys.length; iTo++) {
+        this.queryTicket(keys[iFrom], keys[iTo], '2021-03-20')
+      }
+      iTo = iFrom + 2
+    }
   },
   querying: false,
   from: '',
@@ -10,28 +18,11 @@ const Rare = {
   trainDate: '',
   queryBeginTime: new Date(),
   /**
-   * 点击指定的元素
-   * @param {String} id Element id
-   */
-  elementClick: function (id) {
-    const e = document.getElementById(id)
-    if (e instanceof HTMLElement) e.click()
-  },
-  /**
-   * 填写指定输入框
-   * @param {String} id Element id
-   * @param {String} value 要填写的内容
-   */
-  inputFill: function (id, value) {
-    const input = document.getElementById(id)
-    if (input instanceof HTMLInputElement) input.value = value
-  },
-  /**
    * 打开 12306 页面执行的操作
    */
   initPage: function () {
-    this.elementClick('qd_closeDefaultWarningWindowDialog_id') // 关闭温馨提示
-    this.elementClick('avail_ticket') // 显示全部可预订车次
+    document.getElementById('qd_closeDefaultWarningWindowDialog_id').click() // 关闭温馨提示
+    document.getElementById('avail_ticket').click() // 显示全部可预订车次
     document.getElementById('train_date').removeAttribute('readonly') // 移除出发日只能选不能填的限制
   },
   /**
@@ -52,14 +43,16 @@ const Rare = {
     this.to = to
     this.trainDate = trainDate
     this.queryBeginTime = new Date()
-    this.inputFill('fromStation', this.stationDictionary[from]) // 出发地
-    this.inputFill('toStation', this.stationDictionary[to]) // 到达地
+    document.getElementById('fromStation').value =
+      this.stationDictionary[from] // 出发地
+    document.getElementById('toStation').value =
+      this.stationDictionary[to] // 到达地
     // 界面展示的（不影响实际请求）
-    this.inputFill('fromStationText', from)
-    this.inputFill('toStationText', to)
-    this.inputFill('train_date', trainDate) // 乘车日期
-    this.elementClick('query_ticket') // 点击查询
-    const cover = document.querySelector("body > div.dhx_modal_cover")
+    document.getElementById('fromStationText').value = from
+    document.getElementById('toStationText').value = to
+    document.getElementById('train_date').value = trainDate // 乘车日期
+    document.getElementById('query_ticket').click() // 点击查询
+    const cover = document.querySelector('body > div.dhx_modal_cover')
     const check = setInterval(() => {
       if (cover.style.display === 'none') {
         clearInterval(check)
@@ -73,13 +66,17 @@ const Rare = {
   parseResult: function () {
     console.log('parse result')
     const qlt = document.getElementById('queryLeftTable')
+    if (qlt.childElementCount == 0) {
+      // 没有直达车票
+      this.saveResult([])
+      return
+    }
     const ticketCount = qlt.childElementCount / 2
     const trainList = []
     const loop = (i) => {
       if (i >= ticketCount) return
       const ticketRow = qlt.children[i * 2]
       const priceRow = qlt.children[i * 2 + 1]
-      ticketRow.querySelector('div.train > span').click() // 显示票价
       new MutationObserver((mutationsList, observer) => {
         if (priceRow.style.display !== 'none') {
           observer.disconnect()
@@ -105,6 +102,7 @@ const Rare = {
           }
         }
       }).observe(priceRow, { attributes: true })
+      ticketRow.querySelector('div.train > span').click() // 显示票价
     }
     loop(0)
   },
@@ -121,9 +119,7 @@ const Rare = {
       trainDate: this.trainDate,
       timestamp: this.queryBeginTime.getTime(),
       trainList: trainList
-    }, '12306ticket.json')
+    }, trainList.length > 0 ?
+      '12306ticket.json' : '12306ticketNoDirect.json')
   },
 }
-
-// 打开页面 https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc
-// 设置始发站
