@@ -1,0 +1,336 @@
+{
+  "from": "上海",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616238255391,
+  "trainList": [
+    {
+      "no": "G102",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "06:26",
+      "duration": "06:03",
+      "price": 498
+    },
+    {
+      "no": "G104",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "06:37",
+      "duration": "05:56",
+      "price": 553
+    },
+    {
+      "no": "G6",
+      "startStation": "上海",
+      "endStation": "北京南",
+      "startTime": "07:00",
+      "duration": "04:36",
+      "price": 604
+    },
+    {
+      "no": "G106",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "07:12",
+      "duration": "06:00",
+      "price": 526
+    },
+    {
+      "no": "G108",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "07:22",
+      "duration": "06:00",
+      "price": 525
+    },
+    {
+      "no": "G110",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "07:28",
+      "duration": "06:10",
+      "price": 526
+    },
+    {
+      "no": "G8",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "08:00",
+      "duration": "04:24",
+      "price": 598
+    },
+    {
+      "no": "G112",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "08:05",
+      "duration": "06:03",
+      "price": 553
+    },
+    {
+      "no": "G114",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "08:15",
+      "duration": "05:58",
+      "price": 553
+    },
+    {
+      "no": "G2",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "09:00",
+      "duration": "04:28",
+      "price": 598
+    },
+    {
+      "no": "G116",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "09:34",
+      "duration": "05:49",
+      "price": 553
+    },
+    {
+      "no": "G126",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "09:52",
+      "duration": "06:06",
+      "price": 553
+    },
+    {
+      "no": "G10",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "10:00",
+      "duration": "04:28",
+      "price": 598
+    },
+    {
+      "no": "G122",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "10:40",
+      "duration": "06:03",
+      "price": 552
+    },
+    {
+      "no": "G124",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "10:58",
+      "duration": "05:19",
+      "price": 576
+    },
+    {
+      "no": "G130",
+      "startStation": "上海",
+      "endStation": "北京南",
+      "startTime": "11:15",
+      "duration": "06:29",
+      "price": 558
+    },
+    {
+      "no": "G12",
+      "startStation": "上海",
+      "endStation": "北京南",
+      "startTime": "11:53",
+      "duration": "04:45",
+      "price": 604
+    },
+    {
+      "no": "1462",
+      "startStation": "上海",
+      "endStation": "北京",
+      "startTime": "12:15",
+      "duration": "22:35",
+      "price": 283.5
+    },
+    {
+      "no": "G132",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "12:17",
+      "duration": "06:15",
+      "price": 553
+    },
+    {
+      "no": "G412",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "12:28",
+      "duration": "06:30",
+      "price": 524
+    },
+    {
+      "no": "G134",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "13:00",
+      "duration": "05:48",
+      "price": 576
+    },
+    {
+      "no": "G138",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "13:29",
+      "duration": "05:57",
+      "price": 576
+    },
+    {
+      "no": "G140",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "13:34",
+      "duration": "06:06",
+      "price": 553
+    },
+    {
+      "no": "G4",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "14:00",
+      "duration": "04:28",
+      "price": 598
+    },
+    {
+      "no": "G142",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "14:10",
+      "duration": "06:19",
+      "price": 553
+    },
+    {
+      "no": "G146",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "14:50",
+      "duration": "05:58",
+      "price": 553
+    },
+    {
+      "no": "G14",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "15:00",
+      "duration": "04:35",
+      "price": 598
+    },
+    {
+      "no": "G148",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "15:22",
+      "duration": "05:51",
+      "price": 553
+    },
+    {
+      "no": "G170",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "15:52",
+      "duration": "05:26",
+      "price": 553
+    },
+    {
+      "no": "G150",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "16:07",
+      "duration": "05:53",
+      "price": 551
+    },
+    {
+      "no": "G152",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "16:18",
+      "duration": "05:54",
+      "price": 553
+    },
+    {
+      "no": "G16",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "17:00",
+      "duration": "04:36",
+      "price": 598
+    },
+    {
+      "no": "G154",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "17:13",
+      "duration": "05:40",
+      "price": 524
+    },
+    {
+      "no": "G156",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "17:18",
+      "duration": "05:49",
+      "price": 526
+    },
+    {
+      "no": "G44",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "17:23",
+      "duration": "05:49",
+      "price": 551
+    },
+    {
+      "no": "G158",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "17:34",
+      "duration": "05:55",
+      "price": 498
+    },
+    {
+      "no": "G18",
+      "startStation": "上海",
+      "endStation": "北京南",
+      "startTime": "17:55",
+      "duration": "04:41",
+      "price": 604
+    },
+    {
+      "no": "T110",
+      "startStation": "上海",
+      "endStation": "北京",
+      "startTime": "17:57",
+      "duration": "16:11",
+      "price": 304.5
+    },
+    {
+      "no": "G22",
+      "startStation": "上海虹桥",
+      "endStation": "北京南",
+      "startTime": "19:00",
+      "duration": "04:18",
+      "price": 598
+    },
+    {
+      "no": "Z282",
+      "startStation": "上海南",
+      "endStation": "北京",
+      "startTime": "19:29",
+      "duration": "14:53",
+      "price": 304.5
+    },
+    {
+      "no": "D706",
+      "startStation": "上海虹桥",
+      "endStation": "北京",
+      "startTime": "21:18",
+      "duration": "12:06",
+      "price": 248
+    }
+  ]
+}

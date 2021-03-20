@@ -1,0 +1,16 @@
+{
+  "from": "珠海",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616237820391,
+  "trainList": [
+    {
+      "no": "G68",
+      "startStation": "珠海",
+      "endStation": "北京西",
+      "startTime": "10:11",
+      "duration": "10:59",
+      "price": 932.5
+    }
+  ]
+}

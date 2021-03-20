@@ -1,0 +1,16 @@
+{
+  "from": "南京",
+  "to": "保定",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616239057966,
+  "trainList": [
+    {
+      "no": "K850",
+      "startStation": "南京",
+      "endStation": "保定",
+      "startTime": "16:45",
+      "duration": "19:09",
+      "price": 261.5
+    }
+  ]
+}

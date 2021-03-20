@@ -1,0 +1,16 @@
+{
+  "from": "吉安",
+  "to": "大庆",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616244443964,
+  "trainList": [
+    {
+      "no": "K570",
+      "startStation": "吉安",
+      "endStation": "大庆",
+      "startTime": "16:10",
+      "duration": "40:55",
+      "price": 529.5
+    }
+  ]
+}

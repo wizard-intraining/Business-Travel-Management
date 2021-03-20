@@ -1,0 +1,16 @@
+{
+  "from": "上海",
+  "to": "大庆",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616244475964,
+  "trainList": [
+    {
+      "no": "K48",
+      "startStation": "上海南",
+      "endStation": "大庆西",
+      "startTime": "16:34",
+      "duration": "37:32",
+      "price": 463.5
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "from": "大庆",
+  "to": "西宁",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616244292970,
+  "trainList": [
+    {
+      "no": "K980",
+      "startStation": "大庆西",
+      "endStation": "西宁",
+      "startTime": "07:47",
+      "duration": "47:17",
+      "price": 554
+    }
+  ]
+}

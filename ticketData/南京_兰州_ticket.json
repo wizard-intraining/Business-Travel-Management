@@ -1,0 +1,72 @@
+{
+  "from": "南京",
+  "to": "兰州",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616239367025,
+  "trainList": [
+    {
+      "no": "D310",
+      "startStation": "南京",
+      "endStation": "兰州西",
+      "startTime": "01:49",
+      "duration": "10:58",
+      "price": 545
+    },
+    {
+      "no": "G1970",
+      "startStation": "南京南",
+      "endStation": "兰州西",
+      "startTime": "07:39",
+      "duration": "09:02",
+      "price": 745.5
+    },
+    {
+      "no": "G3181",
+      "startStation": "南京南",
+      "endStation": "兰州西",
+      "startTime": "08:07",
+      "duration": "10:05",
+      "price": 777
+    },
+    {
+      "no": "G3165",
+      "startStation": "南京南",
+      "endStation": "兰州西",
+      "startTime": "11:20",
+      "duration": "10:05",
+      "price": 781
+    },
+    {
+      "no": "Z376",
+      "startStation": "南京",
+      "endStation": "兰州",
+      "startTime": "12:47",
+      "duration": "21:40",
+      "price": 363
+    },
+    {
+      "no": "T112",
+      "startStation": "南京",
+      "endStation": "兰州",
+      "startTime": "15:40",
+      "duration": "21:11",
+      "price": 363
+    },
+    {
+      "no": "T116",
+      "startStation": "南京",
+      "endStation": "兰州",
+      "startTime": "18:55",
+      "duration": "21:21",
+      "price": 363
+    },
+    {
+      "no": "Z216",
+      "startStation": "南京",
+      "endStation": "兰州",
+      "startTime": "21:20",
+      "duration": "20:03",
+      "price": 363
+    }
+  ]
+}

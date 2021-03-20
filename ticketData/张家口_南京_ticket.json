@@ -1,0 +1,16 @@
+{
+  "from": "张家口",
+  "to": "南京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616239050969,
+  "trainList": [
+    {
+      "no": "Z284",
+      "startStation": "张家口",
+      "endStation": "南京",
+      "startTime": "15:17",
+      "duration": "14:06",
+      "price": 280.5
+    }
+  ]
+}

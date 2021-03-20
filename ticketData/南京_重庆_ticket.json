@@ -1,0 +1,120 @@
+{
+  "from": "南京",
+  "to": "重庆",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616239536957,
+  "trainList": [
+    {
+      "no": "D2373",
+      "startStation": "南京南",
+      "endStation": "重庆北",
+      "startTime": "07:20",
+      "duration": "09:28",
+      "price": 478.5
+    },
+    {
+      "no": "D3077",
+      "startStation": "南京南",
+      "endStation": "重庆北",
+      "startTime": "08:01",
+      "duration": "09:34",
+      "price": 478.5
+    },
+    {
+      "no": "G1886",
+      "startStation": "南京南",
+      "endStation": "重庆西",
+      "startTime": "08:07",
+      "duration": "11:29",
+      "price": 956
+    },
+    {
+      "no": "D353",
+      "startStation": "南京南",
+      "endStation": "重庆北",
+      "startTime": "08:36",
+      "duration": "09:24",
+      "price": 478.5
+    },
+    {
+      "no": "D2255",
+      "startStation": "南京南",
+      "endStation": "重庆北",
+      "startTime": "08:41",
+      "duration": "09:39",
+      "price": 478.5
+    },
+    {
+      "no": "G1974",
+      "startStation": "南京南",
+      "endStation": "重庆西",
+      "startTime": "08:49",
+      "duration": "11:30",
+      "price": 949
+    },
+    {
+      "no": "D637",
+      "startStation": "南京南",
+      "endStation": "重庆北",
+      "startTime": "08:52",
+      "duration": "09:44",
+      "price": 478.5
+    },
+    {
+      "no": "D3073",
+      "startStation": "南京南",
+      "endStation": "重庆北",
+      "startTime": "09:18",
+      "duration": "09:57",
+      "price": 478.5
+    },
+    {
+      "no": "D3057",
+      "startStation": "南京南",
+      "endStation": "重庆北",
+      "startTime": "09:44",
+      "duration": "09:15",
+      "price": 470
+    },
+    {
+      "no": "D2223",
+      "startStation": "南京南",
+      "endStation": "重庆北",
+      "startTime": "09:52",
+      "duration": "09:46",
+      "price": 478.5
+    },
+    {
+      "no": "D953",
+      "startStation": "南京南",
+      "endStation": "重庆北",
+      "startTime": "10:16",
+      "duration": "08:37",
+      "price": 478.5
+    },
+    {
+      "no": "D2213",
+      "startStation": "南京南",
+      "endStation": "重庆北",
+      "startTime": "10:21",
+      "duration": "09:49",
+      "price": 470
+    },
+    {
+      "no": "D2271",
+      "startStation": "南京南",
+      "endStation": "重庆北",
+      "startTime": "12:10",
+      "duration": "10:05",
+      "price": 461.5
+    },
+    {
+      "no": "T237",
+      "startStation": "南京",
+      "endStation": "重庆西",
+      "startTime": "14:09",
+      "duration": "24:02",
+      "price": 343
+    }
+  ]
+}

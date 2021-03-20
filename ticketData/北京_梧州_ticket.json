@@ -1,0 +1,16 @@
+{
+  "from": "北京",
+  "to": "梧州",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616237801552,
+  "trainList": [
+    {
+      "no": "T289",
+      "startStation": "北京西",
+      "endStation": "梧州",
+      "startTime": "22:00",
+      "duration": "25:13",
+      "price": 426
+    }
+  ]
+}

@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta name="description" content="我花了将近一个多月的时间断断续续写下这篇博文，并精心写下完整demo。本文所有涉及到的大部分代码均在这个demo里面 ，大家可以直接下载下来运行。另外，本文图片较多，且图片服务器带宽有限，右下角的目录" />
+    <meta property="og:description" content="我花了将近一个多月的时间断断续续写下这篇博文，并精心写下完整demo。本文所有涉及到的大部分代码均在这个demo里面 ，大家可以直接下载下来运行。另外，本文图片较多，且图片服务器带宽有限，右下角的目录" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>【干货】Chrome插件(扩展)开发全攻略 - 我是小茗同学 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=2m3ynxL9I1s_IbqeM2v2dvdzhGLKJ34LMjLnzW2DxEM" />
+    <link id="MainCss" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey.min.css?v=1gj9-XJKL9BZFkjdvROYQPiPWjQXk-hsXXZGtqkfaSc" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/liuxianan/custom.css?v=oFHq6y70qCMDiQu2rE9ZxNhlA54=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey-mobile.min.css?v=Xyuz6VeIasYDypgGRuKfu0nVUgVxnkBSK2__NDwY9EI" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/liuxianan/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/liuxianan/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/liuxianan/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 117633;
+        var currentBlogApp = 'liuxianan';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'BlackLowKey';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2017-07-11 09:30';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=zUSNjTLx2TRyGDtC2yp2a5KPanpNKY5Yf8Q_Ab4Kyec"></script>
+    
+    
+    
+</head>
+<body class="no-navbar">
+    <a name="top"></a>
+        <div id="bannerbar" class="bannerbar-mobile formobile">
+            <a href="https://developer.aliyun.com/learning/trainingcamp/redis/1?utm_content=g_1000245176" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'aliyun-blog-mobile-banner')">
+                <img src="https://img2020.cnblogs.com/blog/35695/202102/35695-20210228140227933-2125906102.jpg" alt="" />
+            </a>
+        </div>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=oS4PkibyMjZ9rGD5XAcLt99uW_s76Javy2up4dbnZNY" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" onclick="logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_begin_html">
+        <a href="https://github.com/sxei" target="_blank" style="position: absolute;right: 0;  top: 0; z-index: 100;">
+    <img src="https://files.cnblogs.com/files/liuxianan/git-link.gif" alt="Fork me on github" style="">
+</a>
+    </div>
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/liuxianan/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/liuxianan/">小茗同学的博客园</a>
+</h1>
+<h2>个人网站：<a href="http://haoji.me" target="_blank">http://haoji.me(好记么)</a></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/liuxianan/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%88%91%E6%98%AF%E5%B0%8F%E8%8C%97%E5%90%8C%E5%AD%A6">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/liuxianan/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/liuxianan/p/chrome-plugin-develop.html">
+    <span>【干货】Chrome插件(扩展)开发全攻略</span>
+    
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                    <div id="cnblogs_post_description" style="display: none">
+        我花了将近一个多月的时间断断续续写下这篇博文，并精心写下完整demo。本文所有涉及到的大部分代码均在这个demo里面 ，大家可以直接下载下来运行。另外，本文图片较多，且图片服务器带宽有限，右下角的目录滚动监听必须等到图片全部加载完毕之后才会触发，所以请耐心等待加载完毕。什么是Chrome插件 严格来讲，我们正在说的东西应该叫Chrome扩展(`Chrome Extension`)，真正意义上的Chrome插件是更底层的浏览器功能扩展，可能需要对浏览器源码有一定掌握才有能力去开发。鉴于Chrome插件的叫法已经习惯，本文也全部采用这种叫法，但读者需深知本文所描述的Chrome插件实际上指的是Chrome扩展。
+    </div>
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<h1 id="写在前面">写在前面</h1>
+<p>我花了将近一个多月的时间断断续续写下这篇博文，并精心写下完整demo，写博客的辛苦大家懂的，所以转载务必保留<a href="http://blog.haoji.me/chrome-plugin-develop.html" target="_blank">出处</a>。本文所有涉及到的大部分代码均在这个demo里面：<a href="https://github.com/sxei/chrome-plugin-demo" target="_blank">https://github.com/sxei/chrome-plugin-demo</a> ，大家可以直接下载下来运行。</p>
+<p>另外，本文图片较多，且图片服务器带宽有限，右下角的目录滚动监听必须等到图片全部加载完毕之后才会触发，所以请耐心等待加载完毕。</p>
+<p>本文目录：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711100228759-367621595.png" alt="" loading="lazy"></p>
+<p>demo部分截图：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711100429118-918303767.png" alt="" loading="lazy"></p>
+<p>鉴于有很多网友有交流学习Chrome插件的诉求，所以最近建了一个插件开发交流群，仅仅是为了提供一个互相交流学习的平台：</p>
+<ul>
+<li>QQ1群：345957146（500人大群，已满）</li>
+<li>QQ2群：665741189（500人大群，已满）</li>
+<li>微信3群：（已满）</li>
+<li>QQ4群：693175748（200人群，已满）</li>
+<li>QQ5群：751534010</li>
+<li>QQ6群：748841202</li>
+</ul>
+<p><img src="https://img.alicdn.com/tfs/TB1rvUrJpY7gK0jSZKzXXaikpXa-1582-740.png" alt="W791xH370" loading="lazy"></p>
+<h1 id="前言">前言</h1>
+<h2 id="什么是chrome插件">什么是Chrome插件</h2>
+<p>严格来讲，我们正在说的东西应该叫Chrome扩展(<code>Chrome Extension</code>)，真正意义上的Chrome插件是更底层的浏览器功能扩展，可能需要对浏览器源码有一定掌握才有能力去开发。鉴于Chrome插件的叫法已经习惯，本文也全部采用这种叫法，但读者需深知本文所描述的Chrome插件实际上指的是Chrome扩展。</p>
+<p>Chrome插件是一个用Web技术开发、用来增强浏览器功能的软件，它其实就是一个由HTML、CSS、JS、图片等资源组成的一个<a href="https://developer.chrome.com/extensions/crx" target="_blank">.crx</a>后缀的压缩包.</p>
+<p>个人猜测<code>crx</code>可能是<code>Chrome Extension</code>如下3个字母的简写：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711100448275-555008903.png" alt="" loading="lazy"></p>
+<p>另外，其实不只是前端技术，Chrome插件还可以配合C++编写的dll动态链接库实现一些更底层的功能(NPAPI)，比如全屏幕截图。</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711100549040-348646504.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>由于安全原因，Chrome浏览器42以上版本已经陆续不再支持NPAPI插件，取而代之的是更安全的PPAPI。</p>
+</blockquote>
+<h2 id="学习chrome插件开发有什么意义">学习Chrome插件开发有什么意义</h2>
+<p>增强浏览器功能，轻松实现属于自己的“定制版”浏览器，等等。</p>
+<p>Chrome插件提供了很多实用API供我们使用，包括但不限于：</p>
+<ul>
+<li>书签控制；</li>
+<li>下载控制；</li>
+<li>窗口控制；</li>
+<li>标签控制；</li>
+<li>网络请求控制，各类事件监听；</li>
+<li>自定义原生菜单；</li>
+<li>完善的通信机制；</li>
+<li>等等；</li>
+</ul>
+<h2 id="为什么是chrome插件而不是firefox插件">为什么是Chrome插件而不是Firefox插件</h2>
+<ol>
+<li>Chrome占有率更高，更多人用；</li>
+<li>开发更简单；</li>
+<li>应用场景更广泛，Firefox插件只能运行在Firefox上，而Chrome除了Chrome浏览器之外，还可以运行在所有webkit内核的国产浏览器，比如360极速浏览器、360安全浏览器、搜狗浏览器、QQ浏览器等等；</li>
+<li>除此之外，Firefox浏览器也对Chrome插件的运行提供了一定的支持；</li>
+</ol>
+<h1 id="开发与调试">开发与调试</h1>
+<p>Chrome插件没有严格的项目结构要求，只要保证本目录有一个<code>manifest.json</code>即可，也不需要专门的IDE，普通的web开发工具即可。</p>
+<p>从右上角菜单-&gt;更多工具-&gt;扩展程序可以进入 插件管理页面，也可以直接在地址栏输入 <a target="_blank">chrome://extensions</a> 访问。</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101025931-1366345527.png" alt="" loading="lazy"></p>
+<p>勾选<code>开发者模式</code>即可以文件夹的形式直接加载插件，否则只能安装<code>.crx</code>格式的文件。Chrome要求插件必须从它的Chrome应用商店安装，其它任何网站下载的都无法直接安装，所以，其实我们可以把<code>crx</code>文件解压，然后通过开发者模式直接加载。</p>
+<p>开发中，代码有任何改动都必须重新加载插件，只需要在插件管理页按下<code>Ctrl+R</code>即可，以防万一最好还把页面刷新一下。</p>
+<h1 id="核心介绍">核心介绍</h1>
+<h2 id="manifestjson">manifest.json</h2>
+<p>这是一个Chrome插件最重要也是必不可少的文件，用来配置所有和插件相关的配置，必须放在根目录。其中，<code>manifest_version</code>、<code>name</code>、<code>version</code>3个是必不可少的，<code>description</code>和<code>icons</code>是推荐的。</p>
+<p>下面给出的是一些常见的配置项，均有中文注释，完整的配置文档请戳<a href="https://developer.chrome.com/extensions/manifest" target="_blank">这里</a>。</p>
+<pre><code class="language-javascript">{
+	// 清单文件的版本，这个必须写，而且必须是2
+	"manifest_version": 2,
+	// 插件的名称
+	"name": "demo",
+	// 插件的版本
+	"version": "1.0.0",
+	// 插件描述
+	"description": "简单的Chrome扩展demo",
+	// 图标，一般偷懒全部用一个尺寸的也没问题
+	"icons":
+	{
+		"16": "img/icon.png",
+		"48": "img/icon.png",
+		"128": "img/icon.png"
+	},
+	// 会一直常驻的后台JS或后台页面
+	"background":
+	{
+		// 2种指定方式，如果指定JS，那么会自动生成一个背景页
+		"page": "background.html"
+		//"scripts": ["js/background.js"]
+	},
+	// 浏览器右上角图标设置，browser_action、page_action、app必须三选一
+	"browser_action": 
+	{
+		"default_icon": "img/icon.png",
+		// 图标悬停时的标题，可选
+		"default_title": "这是一个示例Chrome插件",
+		"default_popup": "popup.html"
+	},
+	// 当某些特定页面打开才显示的图标
+	/*"page_action":
+	{
+		"default_icon": "img/icon.png",
+		"default_title": "我是pageAction",
+		"default_popup": "popup.html"
+	},*/
+	// 需要直接注入页面的JS
+	"content_scripts": 
+	[
+		{
+			//"matches": ["http://*/*", "https://*/*"],
+			// "&lt;all_urls&gt;" 表示匹配所有地址
+			"matches": ["&lt;all_urls&gt;"],
+			// 多个JS按顺序注入
+			"js": ["js/jquery-1.8.3.js", "js/content-script.js"],
+			// JS的注入可以随便一点，但是CSS的注意就要千万小心了，因为一不小心就可能影响全局样式
+			"css": ["css/custom.css"],
+			// 代码注入的时间，可选值： "document_start", "document_end", or "document_idle"，最后一个表示页面空闲时，默认document_idle
+			"run_at": "document_start"
+		},
+		// 这里仅仅是为了演示content-script可以配置多个规则
+		{
+			"matches": ["*://*/*.png", "*://*/*.jpg", "*://*/*.gif", "*://*/*.bmp"],
+			"js": ["js/show-image-content-size.js"]
+		}
+	],
+	// 权限申请
+	"permissions":
+	[
+		"contextMenus", // 右键菜单
+		"tabs", // 标签
+		"notifications", // 通知
+		"webRequest", // web请求
+		"webRequestBlocking",
+		"storage", // 插件本地存储
+		"http://*/*", // 可以通过executeScript或者insertCSS访问的网站
+		"https://*/*" // 可以通过executeScript或者insertCSS访问的网站
+	],
+	// 普通页面能够直接访问的插件资源列表，如果不设置是无法直接访问的
+	"web_accessible_resources": ["js/inject.js"],
+	// 插件主页，这个很重要，不要浪费了这个免费广告位
+	"homepage_url": "https://www.baidu.com",
+	// 覆盖浏览器默认页面
+	"chrome_url_overrides":
+	{
+		// 覆盖浏览器默认的新标签页
+		"newtab": "newtab.html"
+	},
+	// Chrome40以前的插件配置页写法
+	"options_page": "options.html",
+	// Chrome40以后的插件配置页写法，如果2个都写，新版Chrome只认后面这一个
+	"options_ui":
+	{
+		"page": "options.html",
+		// 添加一些默认的样式，推荐使用
+		"chrome_style": true
+	},
+	// 向地址栏注册一个关键字以提供搜索建议，只能设置一个关键字
+	"omnibox": { "keyword" : "go" },
+	// 默认语言
+	"default_locale": "zh_CN",
+	// devtools页面入口，注意只能指向一个HTML文件，不能是JS文件
+	"devtools_page": "devtools.html"
+}
+</code></pre>
+<h2 id="content-scripts">content-scripts</h2>
+<p>所谓<a href="https://developer.chrome.com/extensions/content_scripts" target="_blank">content-scripts</a>，其实就是Chrome插件中向页面注入脚本的一种形式（虽然名为script，其实还可以包括css的），借助<code>content-scripts</code>我们可以实现通过配置的方式轻松向指定页面注入JS和CSS（如果需要动态注入，可以参考下文），最常见的比如：广告屏蔽、页面CSS定制，等等。</p>
+<p>示例配置：</p>
+<pre><code class="language-javascript">{
+	// 需要直接注入页面的JS
+	"content_scripts": 
+	[
+		{
+			//"matches": ["http://*/*", "https://*/*"],
+			// "&lt;all_urls&gt;" 表示匹配所有地址
+			"matches": ["&lt;all_urls&gt;"],
+			// 多个JS按顺序注入
+			"js": ["js/jquery-1.8.3.js", "js/content-script.js"],
+			// JS的注入可以随便一点，但是CSS的注意就要千万小心了，因为一不小心就可能影响全局样式
+			"css": ["css/custom.css"],
+			// 代码注入的时间，可选值： "document_start", "document_end", or "document_idle"，最后一个表示页面空闲时，默认document_idle
+			"run_at": "document_start"
+		}
+	],
+}
+</code></pre>
+<p>特别注意，如果没有主动指定<code>run_at</code>为<code>document_start</code>（默认为<code>document_idle</code>），下面这种代码是不会生效的：</p>
+<pre><code class="language-javascript">document.addEventListener('DOMContentLoaded', function()
+{
+	console.log('我被执行了！');
+});
+</code></pre>
+<p><code>content-scripts</code>和原始页面共享DOM，但是不共享JS，如要访问页面JS（例如某个JS变量），只能通过<code>injected js</code>来实现。<code>content-scripts</code>不能访问绝大部分<code>chrome.xxx.api</code>，除了下面这4种：</p>
+<ul>
+<li>chrome.extension(getURL , inIncognitoContext , lastError , onRequest , sendRequest)</li>
+<li>chrome.i18n</li>
+<li>chrome.runtime(connect , getManifest , getURL , id , onConnect , onMessage , sendMessage)</li>
+<li>chrome.storage</li>
+</ul>
+<p>其实看到这里不要悲观，这些API绝大部分时候都够用了，非要调用其它API的话，你还可以通过通信来实现让background来帮你调用（关于通信，后文有详细介绍）。</p>
+<p>好了，Chrome插件给我们提供了这么强大的JS注入功能，剩下的就是发挥你的想象力去玩弄浏览器了。</p>
+<h2 id="background">background</h2>
+<p>后台（姑且这么翻译吧），是一个常驻的页面，它的生命周期是插件中所有类型页面中最长的，它随着浏览器的打开而打开，随着浏览器的关闭而关闭，所以通常把需要一直运行的、启动就运行的、全局的代码放在background里面。</p>
+<p>background的权限非常高，几乎可以调用所有的Chrome扩展API（除了devtools），而且它可以无限制跨域，也就是可以跨域访问任何网站而无需要求对方设置<code>CORS</code>。</p>
+<blockquote>
+<p>经过测试，其实不止是background，所有的直接通过<code>chrome-extension://id/xx.html</code>这种方式打开的网页都可以无限制跨域。</p>
+</blockquote>
+<p>配置中，<code>background</code>可以通过<code>page</code>指定一张网页，也可以通过<code>scripts</code>直接指定一个JS，Chrome会自动为这个JS生成一个默认的网页：</p>
+<pre><code class="language-javascript">{
+	// 会一直常驻的后台JS或后台页面
+	"background":
+	{
+		// 2种指定方式，如果指定JS，那么会自动生成一个背景页
+		"page": "background.html"
+		//"scripts": ["js/background.js"]
+	},
+}
+</code></pre>
+<p>需要特别说明的是，虽然你可以通过<code>chrome-extension://xxx/background.html</code>直接打开后台页，但是你打开的后台页和真正一直在后台运行的那个页面不是同一个，换句话说，你可以打开无数个<code>background.html</code>，但是真正在后台常驻的只有一个，而且这个你永远看不到它的界面，只能调试它的代码。</p>
+<h2 id="event-pages">event-pages</h2>
+<p>这里顺带介绍一下<a href="https://developer.chrome.com/extensions/event_pages" target="_blank">event-pages</a>，它是一个什么东西呢？鉴于background生命周期太长，长时间挂载后台可能会影响性能，所以Google又弄一个<code>event-pages</code>，在配置文件上，它与background的唯一区别就是多了一个<code>persistent</code>参数：</p>
+<pre><code class="language-javascript">{
+	"background":
+	{
+		"scripts": ["event-page.js"],
+		"persistent": false
+	},
+}
+</code></pre>
+<p>它的生命周期是：在被需要时加载，在空闲时被关闭，什么叫被需要时呢？比如第一次安装、插件更新、有content-script向它发送消息，等等。</p>
+<p>除了配置文件的变化，代码上也有一些细微变化，个人这个简单了解一下就行了，一般情况下background也不会很消耗性能的。</p>
+<h2 id="popup">popup</h2>
+<p><code>popup</code>是点击<code>browser_action</code>或者<code>page_action</code>图标时打开的一个小窗口网页，焦点离开网页就立即关闭，一般用来做一些临时性的交互。</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101054353-176942304.png" alt="博客园网摘插件popup效果" loading="lazy"></p>
+<p><code>popup</code>可以包含任意你想要的HTML内容，并且会自适应大小。可以通过<code>default_popup</code>字段来指定popup页面，也可以调用<code>setPopup()</code>方法。</p>
+<p>配置方式：</p>
+<pre><code class="language-javascript">{
+	"browser_action":
+	{
+		"default_icon": "img/icon.png",
+		// 图标悬停时的标题，可选
+		"default_title": "这是一个示例Chrome插件",
+		"default_popup": "popup.html"
+	}
+}
+</code></pre>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101114415-2019243064.png" alt="" loading="lazy"></p>
+<p>需要特别注意的是，由于单击图标打开popup，焦点离开又立即关闭，所以popup页面的生命周期一般很短，需要长时间运行的代码千万不要写在popup里面。</p>
+<p>在权限上，它和background非常类似，它们之间最大的不同是生命周期的不同，popup中可以直接通过<code>chrome.extension.getBackgroundPage()</code>获取background的window对象。</p>
+<h2 id="injected-script">injected-script</h2>
+<p>这里的<code>injected-script</code>是我给它取的，指的是通过DOM操作的方式向页面注入的一种JS。为什么要把这种JS单独拿出来讨论呢？又或者说为什么需要通过这种方式注入JS呢？</p>
+<p>这是因为<code>content-script</code>有一个很大的“缺陷”，也就是无法访问页面中的JS，虽然它可以操作DOM，但是DOM却不能调用它，也就是无法在DOM中通过绑定事件的方式调用<code>content-script</code>中的代码（包括直接写<code>onclick</code>和<code>addEventListener</code>2种方式都不行），但是，“在页面上添加一个按钮并调用插件的扩展API”是一个很常见的需求，那该怎么办呢？其实这就是本小节要讲的。</p>
+<p>在<code>content-script</code>中通过DOM方式向页面注入<code>inject-script</code>代码示例：</p>
+<pre><code class="language-javascript">// 向页面注入JS
+function injectCustomJs(jsPath)
+{
+	jsPath = jsPath || 'js/inject.js';
+	var temp = document.createElement('script');
+	temp.setAttribute('type', 'text/javascript');
+	// 获得的地址类似：chrome-extension://ihcokhadfjfchaeagdoclpnjdiokfakg/js/inject.js
+	temp.src = chrome.extension.getURL(jsPath);
+	temp.onload = function()
+	{
+		// 放在页面不好看，执行完后移除掉
+		this.parentNode.removeChild(this);
+	};
+	document.head.appendChild(temp);
+}
+</code></pre>
+<p>你以为这样就行了？执行一下你会看到如下报错：</p>
+<pre><code>Denying load of chrome-extension://efbllncjkjiijkppagepehoekjojdclc/js/inject.js. Resources must be listed in the web_accessible_resources manifest key in order to be loaded by pages outside the extension.
+</code></pre>
+<p>意思就是你想要在web中直接访问插件中的资源的话必须显示声明才行，配置文件中增加如下：</p>
+<pre><code class="language-javascript">{
+	// 普通页面能够直接访问的插件资源列表，如果不设置是无法直接访问的
+	"web_accessible_resources": ["js/inject.js"],
+}
+</code></pre>
+<p>至于<code>inject-script</code>如何调用<code>content-script</code>中的代码，后面我会在专门的一个消息通信章节详细介绍。</p>
+<h2 id="homepage_url">homepage_url</h2>
+<p>开发者或者插件主页设置，一般会在如下2个地方显示：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101138368-1160396252.png" alt="" loading="lazy"></p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101153556-956484967.png" alt="" loading="lazy"></p>
+<h1 id="chrome插件的8种展示形式">Chrome插件的8种展示形式</h1>
+<h2 id="browseraction浏览器右上角">browserAction(浏览器右上角)</h2>
+<p>通过配置<code>browser_action</code>可以在浏览器的右上角增加一个图标，一个<code>browser_action</code>可以拥有一个图标，一个<code>tooltip</code>，一个<code>badge</code>和一个<code>popup</code>。</p>
+<p>示例配置如下：</p>
+<pre><code class="language-json">"browser_action":
+{
+	"default_icon": "img/icon.png",
+	"default_title": "这是一个示例Chrome插件",
+	"default_popup": "popup.html"
+}
+</code></pre>
+<h3 id="图标">图标</h3>
+<p><code>browser_action</code>图标推荐使用宽高都为19像素的图片，更大的图标会被缩小，格式随意，一般推荐png，可以通过manifest中<code>default_icon</code>字段配置，也可以调用setIcon()方法。</p>
+<h3 id="tooltip">tooltip</h3>
+<p>修改<code>browser_action</code>的manifest中<code>default_title</code>字段，或者调用<code>setTitle()</code>方法。</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101210759-683039077.png" alt="" loading="lazy"></p>
+<h3 id="badge">badge</h3>
+<p>所谓<code>badge</code>就是在图标上显示一些文本，可以用来更新一些小的扩展状态提示信息。因为badge空间有限，所以只支持4个以下的字符（英文4个，中文2个）。badge无法通过配置文件来指定，必须通过代码实现，设置badge文字和颜色可以分别使用<code>setBadgeText()</code>和<code>setBadgeBackgroundColor()</code>。</p>
+<pre><code class="language-javascript">chrome.browserAction.setBadgeText({text: 'new'});
+chrome.browserAction.setBadgeBackgroundColor({color: [255, 0, 0, 255]});
+</code></pre>
+<p>效果：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101228056-2133169218.png" alt="" loading="lazy"></p>
+<h2 id="pageaction地址栏右侧">pageAction(地址栏右侧)</h2>
+<p>所谓<code>pageAction</code>，指的是只有当某些特定页面打开才显示的图标，它和<code>browserAction</code>最大的区别是一个始终都显示，一个只在特定情况才显示。</p>
+<p>需要特别说明的是早些版本的Chrome是将pageAction放在地址栏的最右边，左键单击弹出popup，右键单击则弹出相关默认的选项菜单：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101549665-519093069.png" alt="" loading="lazy"></p>
+<p>而新版的Chrome更改了这一策略，pageAction和普通的browserAction一样也是放在浏览器右上角，只不过没有点亮时是灰色的，点亮了才是彩色的，灰色时无论左键还是右键单击都是弹出选项：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101604947-1619892598.gif" alt="" loading="lazy"></p>
+<blockquote>
+<p>具体是从哪一版本开始改的没去仔细考究，反正知道v50.0的时候还是前者，v58.0的时候已改为后者。</p>
+</blockquote>
+<p>调整之后的<code>pageAction</code>我们可以简单地把它看成是可以置灰的<code>browserAction</code>。</p>
+<ul>
+<li>chrome.pageAction.show(tabId) 显示图标；</li>
+<li>chrome.pageAction.hide(tabId) 隐藏图标；</li>
+</ul>
+<p>示例(只有打开百度才显示图标)：</p>
+<pre><code class="language-javascript">// manifest.json
+{
+	"page_action":
+	{
+		"default_icon": "img/icon.png",
+		"default_title": "我是pageAction",
+		"default_popup": "popup.html"
+	},
+	"permissions": ["declarativeContent"]
+}
+
+// background.js
+chrome.runtime.onInstalled.addListener(function(){
+	chrome.declarativeContent.onPageChanged.removeRules(undefined, function(){
+		chrome.declarativeContent.onPageChanged.addRules([
+			{
+				conditions: [
+					// 只有打开百度才显示pageAction
+					new chrome.declarativeContent.PageStateMatcher({pageUrl: {urlContains: 'baidu.com'}})
+				],
+				actions: [new chrome.declarativeContent.ShowPageAction()]
+			}
+		]);
+	});
+});
+</code></pre>
+<p>效果图：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101633728-1835819108.gif" alt="" loading="lazy"></p>
+<h2 id="右键菜单">右键菜单</h2>
+<p>通过开发Chrome插件可以自定义浏览器的右键菜单，主要是通过<code>chrome.contextMenus</code>API实现，右键菜单可以出现在不同的上下文，比如普通页面、选中的文字、图片、链接，等等，如果有同一个插件里面定义了多个菜单，Chrome会自动组合放到以插件名字命名的二级菜单里，如下：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101651618-268310284.png" alt="" loading="lazy"></p>
+<h3 id="最简单的右键菜单示例">最简单的右键菜单示例</h3>
+<pre><code class="language-javascript">// manifest.json
+{"permissions": ["contextMenus"]}
+
+// background.js
+chrome.contextMenus.create({
+	title: "测试右键菜单",
+	onclick: function(){alert('您点击了右键菜单！');}
+});
+</code></pre>
+<p>效果：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101704775-1000780193.png" alt="" loading="lazy"></p>
+<h3 id="添加右键百度搜索">添加右键百度搜索</h3>
+<pre><code class="language-javascript">// manifest.json
+{"permissions": ["contextMenus"， "tabs"]}
+
+// background.js
+chrome.contextMenus.create({
+	title: '使用度娘搜索：%s', // %s表示选中的文字
+	contexts: ['selection'], // 只有当选中文字时才会出现此右键菜单
+	onclick: function(params)
+	{
+		// 注意不能使用location.href，因为location是属于background的window对象
+		chrome.tabs.create({url: 'https://www.baidu.com/s?ie=utf-8&amp;wd=' + encodeURI(params.selectionText)});
+	}
+});
+</code></pre>
+<p>效果如下：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101721384-916526079.png" alt="" loading="lazy"></p>
+<h3 id="语法说明">语法说明</h3>
+<p>这里只是简单列举一些常用的，完整API参见：<a href="https://developer.chrome.com/extensions/contextMenus" target="_blank">https://developer.chrome.com/extensions/contextMenus</a></p>
+<pre><code class="language-javascript">chrome.contextMenus.create({
+	type: 'normal'， // 类型，可选：["normal", "checkbox", "radio", "separator"]，默认 normal
+	title: '菜单的名字', // 显示的文字，除非为“separator”类型否则此参数必需，如果类型为“selection”，可以使用%s显示选定的文本
+	contexts: ['page'], // 上下文环境，可选：["all", "page", "frame", "selection", "link", "editable", "image", "video", "audio"]，默认page
+	onclick: function(){}, // 单击时触发的方法
+	parentId: 1, // 右键菜单项的父菜单项ID。指定父菜单项将会使此菜单项成为父菜单项的子菜单
+	documentUrlPatterns: 'https://*.baidu.com/*' // 只在某些页面显示此右键菜单
+});
+// 删除某一个菜单项
+chrome.contextMenus.remove(menuItemId)；
+// 删除所有自定义右键菜单
+chrome.contextMenus.removeAll();
+// 更新某一个菜单项
+chrome.contextMenus.update(menuItemId, updateProperties);
+</code></pre>
+<h2 id="override覆盖特定页面">override(覆盖特定页面)</h2>
+<p>使用<code>override</code>页可以将Chrome默认的一些特定页面替换掉，改为使用扩展提供的页面。</p>
+<p>扩展可以替代如下页面：</p>
+<ul>
+<li>历史记录：从工具菜单上点击历史记录时访问的页面，或者从地址栏直接输入 <a target="_blank">chrome://history</a></li>
+<li>新标签页：当创建新标签的时候访问的页面，或者从地址栏直接输入 <a target="_blank">chrome://newtab</a></li>
+<li>书签：浏览器的书签，或者直接输入 <a target="_blank">chrome://bookmarks</a></li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>一个扩展只能替代一个页面；</li>
+<li>不能替代隐身窗口的新标签页；</li>
+<li>网页必须设置title，否则用户可能会看到网页的URL，造成困扰；</li>
+</ul>
+<p>下面的截图是默认的新标签页和被扩展替换掉的新标签页。</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101740947-1059479610.png" alt="" loading="lazy"></p>
+<p>代码（注意，一个插件只能替代一个默认页，以下仅为演示）：</p>
+<pre><code class="language-javascript">"chrome_url_overrides":
+{
+	"newtab": "newtab.html",
+	"history": "history.html",
+	"bookmarks": "bookmarks.html"
+}
+</code></pre>
+<h2 id="devtools开发者工具">devtools(开发者工具)</h2>
+<h3 id="预热">预热</h3>
+<p>使用过vue的应该见过这种类型的插件：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101756868-1307680533.png" alt="" loading="lazy"></p>
+<p>是的，Chrome允许插件在开发者工具(devtools)上动手脚，主要表现在：</p>
+<ul>
+<li>自定义一个和多个和<code>Elements</code>、<code>Console</code>、<code>Sources</code>等同级别的面板；</li>
+<li>自定义侧边栏(sidebar)，目前只能自定义<code>Elements</code>面板的侧边栏；</li>
+</ul>
+<p>先来看2张简单的demo截图，自定义面板（判断当前页面是否使用了jQuery）：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101815243-1381068889.png" alt="" loading="lazy"></p>
+<p>自定义侧边栏（获取当前页面所有图片）：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101832259-552804777.png" alt="" loading="lazy"></p>
+<h3 id="devtools扩展介绍">devtools扩展介绍</h3>
+<p>主页：<a href="https://developer.chrome.com/extensions/devtools" target="_blank">https://developer.chrome.com/extensions/devtools</a></p>
+<p>来一张官方图片：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101847493-273760238.png" alt="" loading="lazy"></p>
+<p>每打开一个开发者工具窗口，都会创建devtools页面的实例，F12窗口关闭，页面也随着关闭，所以devtools页面的生命周期和devtools窗口是一致的。devtools页面可以访问一组特有的<code>DevTools API</code>以及有限的扩展API，这组特有的<code>DevTools API</code>只有devtools页面才可以访问，background都无权访问，这些API包括：</p>
+<ul>
+<li><code>chrome.devtools.panels</code>：面板相关；</li>
+<li><code>chrome.devtools.inspectedWindow</code>：获取被审查窗口的有关信息；</li>
+<li><code>chrome.devtools.network</code>：获取有关网络请求的信息；</li>
+</ul>
+<p>大部分扩展API都无法直接被<code>DevTools</code>页面调用，但它可以像<code>content-script</code>一样直接调用<code>chrome.extension</code>和<code>chrome.runtime</code>API，同时它也可以像<code>content-script</code>一样使用Message交互的方式与background页面进行通信。</p>
+<h3 id="实例：创建一个devtools扩展">实例：创建一个devtools扩展</h3>
+<p>首先，要针对开发者工具开发插件，需要在清单文件声明如下：</p>
+<pre><code class="language-javascript">{
+	// 只能指向一个HTML文件，不能是JS文件
+	"devtools_page": "devtools.html"
+}
+</code></pre>
+<p>这个<code>devtools.html</code>里面一般什么都没有，就引入一个js：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+	&lt;script type="text/javascript" src="js/devtools.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>可以看出来，其实真正代码是<code>devtools.js</code>，html文件是“多余”的，所以这里觉得有点坑，<code>devtools_page</code>干嘛不允许直接指定JS呢？</p>
+<p>再来看devtools.js的代码：</p>
+<pre><code class="language-javascript">// 创建自定义面板，同一个插件可以创建多个自定义面板
+// 几个参数依次为：panel标题、图标（其实设置了也没地方显示）、要加载的页面、加载成功后的回调
+chrome.devtools.panels.create('MyPanel', 'img/icon.png', 'mypanel.html', function(panel)
+{
+	console.log('自定义面板创建成功！'); // 注意这个log一般看不到
+});
+
+// 创建自定义侧边栏
+chrome.devtools.panels.elements.createSidebarPane("Images", function(sidebar)
+{
+	// sidebar.setPage('../sidebar.html'); // 指定加载某个页面
+	sidebar.setExpression('document.querySelectorAll("img")', 'All Images'); // 通过表达式来指定
+	//sidebar.setObject({aaa: 111, bbb: 'Hello World!'}); // 直接设置显示某个对象
+});
+</code></pre>
+<p>setPage时的效果：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101903837-2079245455.png" alt="" loading="lazy"></p>
+<p>以下截图示例的代码：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101928103-1093454821.png" alt="" loading="lazy"></p>
+<pre><code class="language-javascript">// 检测jQuery
+document.getElementById('check_jquery').addEventListener('click', function()
+{
+	// 访问被检查的页面DOM需要使用inspectedWindow
+	// 简单例子：检测被检查页面是否使用了jQuery
+	chrome.devtools.inspectedWindow.eval("jQuery.fn.jquery", function(result, isException)
+	{
+		var html = '';
+		if (isException) html = '当前页面没有使用jQuery。';
+		else html = '当前页面使用了jQuery，版本为：'+result;
+		alert(html);
+	});
+});
+
+// 打开某个资源
+document.getElementById('open_resource').addEventListener('click', function()
+{
+	chrome.devtools.inspectedWindow.eval("window.location.href", function(result, isException)
+	{
+		chrome.devtools.panels.openResource(result, 20, function()
+		{
+			console.log('资源打开成功！');
+		});
+	});
+});
+
+// 审查元素
+document.getElementById('test_inspect').addEventListener('click', function()
+{
+	chrome.devtools.inspectedWindow.eval("inspect(document.images[0])", function(result, isException){});
+});
+
+// 获取所有资源
+document.getElementById('get_all_resources').addEventListener('click', function()
+{
+	chrome.devtools.inspectedWindow.getResources(function(resources)
+	{
+		alert(JSON.stringify(resources));
+	});
+});
+</code></pre>
+<h3 id="调试技巧">调试技巧</h3>
+<p>修改了devtools页面的代码时，需要先在 chrome://extensions 页面按下<code>Ctrl+R</code>重新加载插件，然后关闭再打开开发者工具即可，无需刷新页面（而且只刷新页面不刷新开发者工具的话是不会生效的）。</p>
+<p>由于devtools本身就是开发者工具页面，所以几乎没有方法可以直接调试它，直接用 <code>chrome-extension://extid/devtools.html"</code>的方式打开页面肯定报错，因为不支持相关特殊API，只能先自己写一些方法屏蔽这些错误，调试通了再放开。</p>
+<h2 id="option选项页">option(选项页)</h2>
+<p>所谓<code>options</code>页，就是插件的设置页面，有2个入口，一个是右键图标有一个“选项”菜单，还有一个在插件管理页面：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711101949603-1425351182.png" alt="" loading="lazy"></p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102004775-83441694.png" alt="" loading="lazy"></p>
+<p>在Chrome40以前，options页面和其它普通页面没什么区别，Chrome40以后则有了一些变化。</p>
+<p>我们先看老版的<a href="https://developer.chrome.com/extensions/options" target="_blank">options</a>：</p>
+<pre><code class="language-javascript">{
+	// Chrome40以前的插件配置页写法
+	"options_page": "options.html",
+}
+</code></pre>
+<p>这个页面里面的内容就随你自己发挥了，配置之后在插件管理页就会看到一个<code>选项</code>按钮入口，点进去就是打开一个网页，没啥好讲的。</p>
+<p>效果:</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102020962-228055231.png" alt="" loading="lazy"></p>
+<p>再来看新版的<a href="https://developer.chrome.com/extensions/optionsV2" target="_blank">optionsV2</a>：</p>
+<pre><code class="language-javascript">{
+	"options_ui":
+	{
+    	"page": "options.html",
+		// 添加一些默认的样式，推荐使用
+    	"chrome_style": true
+	},
+}
+</code></pre>
+<p><code>options.html</code>的代码我们没有任何改动，只是配置文件改了，之后效果如下：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102036665-607005369.png" alt="" loading="lazy"></p>
+<p>看起来是不是高大上了？</p>
+<p>几点注意：</p>
+<ul>
+<li>为了兼容，建议2种都写，如果都写了，Chrome40以后会默认读取新版的方式；</li>
+<li>新版options中不能使用alert；</li>
+<li>数据存储建议用chrome.storage，因为会随用户自动同步；</li>
+</ul>
+<h2 id="omnibox">omnibox</h2>
+<p><code>omnibox</code>是向用户提供搜索建议的一种方式。先来看个<code>gif</code>图以便了解一下这东西到底是个什么鬼：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102052275-866111894.gif" alt="" loading="lazy"></p>
+<p>注册某个关键字以触发插件自己的搜索建议界面，然后可以任意发挥了。</p>
+<p>首先，配置文件如下：</p>
+<pre><code class="language-javascript">{
+	// 向地址栏注册一个关键字以提供搜索建议，只能设置一个关键字
+	"omnibox": { "keyword" : "go" },
+}
+</code></pre>
+<p>然后<code>background.js</code>中注册监听事件：</p>
+<pre><code class="language-javascript">// omnibox 演示
+chrome.omnibox.onInputChanged.addListener((text, suggest) =&gt; {
+	console.log('inputChanged: ' + text);
+	if(!text) return;
+	if(text == '美女') {
+		suggest([
+			{content: '中国' + text, description: '你要找“中国美女”吗？'},
+			{content: '日本' + text, description: '你要找“日本美女”吗？'},
+			{content: '泰国' + text, description: '你要找“泰国美女或人妖”吗？'},
+			{content: '韩国' + text, description: '你要找“韩国美女”吗？'}
+		]);
+	}
+	else if(text == '微博') {
+		suggest([
+			{content: '新浪' + text, description: '新浪' + text},
+			{content: '腾讯' + text, description: '腾讯' + text},
+			{content: '搜狐' + text, description: '搜索' + text},
+		]);
+	}
+	else {
+		suggest([
+			{content: '百度搜索 ' + text, description: '百度搜索 ' + text},
+			{content: '谷歌搜索 ' + text, description: '谷歌搜索 ' + text},
+		]);
+	}
+});
+
+// 当用户接收关键字建议时触发
+chrome.omnibox.onInputEntered.addListener((text) =&gt; {
+    console.log('inputEntered: ' + text);
+	if(!text) return;
+	var href = '';
+    if(text.endsWith('美女')) href = 'http://image.baidu.com/search/index?tn=baiduimage&amp;ie=utf-8&amp;word=' + text;
+	else if(text.startsWith('百度搜索')) href = 'https://www.baidu.com/s?ie=UTF-8&amp;wd=' + text.replace('百度搜索 ', '');
+	else if(text.startsWith('谷歌搜索')) href = 'https://www.google.com.tw/search?q=' + text.replace('谷歌搜索 ', '');
+	else href = 'https://www.baidu.com/s?ie=UTF-8&amp;wd=' + text;
+	openUrlCurrentTab(href);
+});
+// 获取当前选项卡ID
+function getCurrentTabId(callback)
+{
+	chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
+	{
+		if(callback) callback(tabs.length ? tabs[0].id: null);
+	});
+}
+
+// 当前标签打开某个链接
+function openUrlCurrentTab(url)
+{
+	getCurrentTabId(tabId =&gt; {
+		chrome.tabs.update(tabId, {url: url});
+	})
+}
+</code></pre>
+<h2 id="桌面通知">桌面通知</h2>
+<p>Chrome提供了一个<code>chrome.notifications</code>API以便插件推送桌面通知，暂未找到<code>chrome.notifications</code>和HTML5自带的<code>Notification</code>的显著区别及优势。</p>
+<p>在后台JS中，无论是使用<code>chrome.notifications</code>还是<code>Notification</code>都不需要申请权限（HTML5方式需要申请权限），直接使用即可。</p>
+<p>最简单的通知：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102111697-515392377.png" alt="" loading="lazy"></p>
+<p>代码：</p>
+<pre><code class="language-javascript">chrome.notifications.create(null, {
+	type: 'basic',
+	iconUrl: 'img/icon.png',
+	title: '这是标题',
+	message: '您刚才点击了自定义右键菜单！'
+});
+</code></pre>
+<p>通知的样式可以很丰富：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102121415-1959756640.png" alt="" loading="lazy"></p>
+<p>这个没有深入研究，有需要的可以去看官方文档。</p>
+<h1 id="5种类型的js对比">5种类型的JS对比</h1>
+<p>Chrome插件的JS主要可以分为这5类：<code>injected script</code>、<code>content-script</code>、<code>popup js</code>、<code>background js</code>和<code>devtools js</code>，</p>
+<h2 id="权限对比">权限对比</h2>
+<table>
+<thead>
+<tr>
+<th>JS种类</th>
+<th>可访问的API</th>
+<th>DOM访问情况</th>
+<th>JS访问情况</th>
+<th>直接跨域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>injected script</td>
+<td>和普通JS无任何差别，不能访问任何扩展API</td>
+<td>可以访问</td>
+<td>可以访问</td>
+<td>不可以</td>
+</tr>
+<tr>
+<td>content script</td>
+<td>只能访问 extension、runtime等部分API</td>
+<td>可以访问</td>
+<td>不可以</td>
+<td>不可以</td>
+</tr>
+<tr>
+<td>popup js</td>
+<td>可访问绝大部分API，除了devtools系列</td>
+<td>不可直接访问</td>
+<td>不可以</td>
+<td>可以</td>
+</tr>
+<tr>
+<td>background js</td>
+<td>可访问绝大部分API，除了devtools系列</td>
+<td>不可直接访问</td>
+<td>不可以</td>
+<td>可以</td>
+</tr>
+<tr>
+<td>devtools js</td>
+<td>只能访问 devtools、extension、runtime等部分API</td>
+<td>可以</td>
+<td>可以</td>
+<td>不可以</td>
+</tr>
+</tbody>
+</table>
+<h2 id="调试方式对比">调试方式对比</h2>
+<table>
+<thead>
+<tr>
+<th>JS类型</th>
+<th>调试方式</th>
+<th>图片说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>injected script</td>
+<td>直接普通的F12即可</td>
+<td>懒得截图</td>
+</tr>
+<tr>
+<td>content-script</td>
+<td>打开Console,如图切换</td>
+<td><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170712142454118-1741772825.png" alt="" loading="lazy"></td>
+</tr>
+<tr>
+<td>popup-js</td>
+<td>popup页面右键审查元素</td>
+<td><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170712142508275-102456585.png" alt="" loading="lazy"></td>
+</tr>
+<tr>
+<td>background</td>
+<td>插件管理页点击背景页即可</td>
+<td><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170712142524665-745904947.png" alt="" loading="lazy"></td>
+</tr>
+<tr>
+<td>devtools-js</td>
+<td>暂未找到有效方法</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h1 id="消息通信">消息通信</h1>
+<p>通信主页：<a href="https://developer.chrome.com/extensions/messaging" target="_blank">https://developer.chrome.com/extensions/messaging</a></p>
+<p>前面我们介绍了Chrome插件中存在的5种JS，那么它们之间如何互相通信呢？下面先来系统概况一下，然后再分类细说。需要知道的是，popup和background其实几乎可以视为一种东西，因为它们可访问的API都一样、通信机制一样、都可以跨域。</p>
+<h2 id="互相通信概览">互相通信概览</h2>
+<p>注：<code>-</code>表示不存在或者无意义，或者待验证。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>injected-script</th>
+<th>content-script</th>
+<th>popup-js</th>
+<th>background-js</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>injected-script</td>
+<td>-</td>
+<td>window.postMessage</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>content-script</td>
+<td>window.postMessage</td>
+<td>-</td>
+<td>chrome.runtime.sendMessage chrome.runtime.connect</td>
+<td>chrome.runtime.sendMessage chrome.runtime.connect</td>
+</tr>
+<tr>
+<td>popup-js</td>
+<td>-</td>
+<td>chrome.tabs.sendMessage chrome.tabs.connect</td>
+<td>-</td>
+<td>chrome.extension. getBackgroundPage()</td>
+</tr>
+<tr>
+<td>background-js</td>
+<td>-</td>
+<td>chrome.tabs.sendMessage chrome.tabs.connect</td>
+<td>chrome.extension.getViews</td>
+<td>-</td>
+</tr>
+<tr>
+<td>devtools-js</td>
+<td>chrome.devtools. inspectedWindow.eval</td>
+<td>-</td>
+<td>chrome.runtime.sendMessage</td>
+<td>chrome.runtime.sendMessage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="通信详细介绍">通信详细介绍</h2>
+<h3 id="popup和background">popup和background</h3>
+<p>popup可以直接调用background中的JS方法，也可以直接访问background的DOM：</p>
+<pre><code class="language-javascript">// background.js
+function test()
+{
+	alert('我是background！');
+}
+
+// popup.js
+var bg = chrome.extension.getBackgroundPage();
+bg.test(); // 访问bg的函数
+alert(bg.document.body.innerHTML); // 访问bg的DOM
+</code></pre>
+<blockquote>
+<p>小插曲，今天碰到一个情况，发现popup无法获取background的任何方法，找了半天才发现是因为background的js报错了，而你如果不主动查看background的js的话，是看不到错误信息的，特此提醒。</p>
+</blockquote>
+<p>至于<code>background</code>访问<code>popup</code>如下（前提是<code>popup</code>已经打开）：</p>
+<pre><code class="language-javascript">var views = chrome.extension.getViews({type:'popup'});
+if(views.length &gt; 0) {
+	console.log(views[0].location.href);
+}
+</code></pre>
+<h3 id="popup或者bg向content主动发送消息">popup或者bg向content主动发送消息</h3>
+<p>background.js或者popup.js：</p>
+<pre><code class="language-javascript">function sendMessageToContentScript(message, callback)
+{
+	chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
+	{
+		chrome.tabs.sendMessage(tabs[0].id, message, function(response)
+		{
+			if(callback) callback(response);
+		});
+	});
+}
+sendMessageToContentScript({cmd:'test', value:'你好，我是popup！'}, function(response)
+{
+	console.log('来自content的回复：'+response);
+});
+</code></pre>
+<p><code>content-script.js</code>接收：</p>
+<pre><code class="language-javascript">chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
+{
+	// console.log(sender.tab ?"from a content script:" + sender.tab.url :"from the extension");
+	if(request.cmd == 'test') alert(request.value);
+	sendResponse('我收到了你的消息！');
+});
+</code></pre>
+<p>双方通信直接发送的都是JSON对象，不是JSON字符串，所以无需解析，很方便（当然也可以直接发送字符串）。</p>
+<blockquote>
+<p>网上有些老代码中用的是<code>chrome.extension.onMessage</code>，没有完全查清二者的区别(貌似是别名)，但是建议统一使用<code>chrome.runtime.onMessage</code>。</p>
+</blockquote>
+<h3 id="content-script主动发消息给后台">content-script主动发消息给后台</h3>
+<p>content-script.js：</p>
+<pre><code class="language-javascript">chrome.runtime.sendMessage({greeting: '你好，我是content-script呀，我主动发消息给后台！'}, function(response) {
+	console.log('收到来自后台的回复：' + response);
+});
+</code></pre>
+<p>background.js 或者 popup.js：</p>
+<pre><code class="language-javascript">// 监听来自content-script的消息
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
+{
+	console.log('收到来自content-script的消息：');
+	console.log(request, sender, sendResponse);
+	sendResponse('我是后台，我已收到你的消息：' + JSON.stringify(request));
+});
+</code></pre>
+<p>注意事项：</p>
+<ul>
+<li>content_scripts向<code>popup</code>主动发消息的前提是popup必须打开！否则需要利用background作中转；</li>
+<li>如果background和popup同时监听，那么它们都可以同时收到消息，但是只有一个可以sendResponse，一个先发送了，那么另外一个再发送就无效；</li>
+</ul>
+<h3 id="injected-script和content-script">injected script和content-script</h3>
+<p><code>content-script</code>和页面内的脚本（<code>injected-script</code>自然也属于页面内的脚本）之间唯一共享的东西就是页面的DOM元素，有2种方法可以实现二者通讯：</p>
+<ol>
+<li>可以通过<code>window.postMessage</code>和<code>window.addEventListener</code>来实现二者消息通讯；</li>
+<li>通过自定义DOM事件来实现；</li>
+</ol>
+<p>第一种方法（推荐）：</p>
+<p><code>injected-script</code>中：</p>
+<pre><code class="language-javascript">window.postMessage({"test": '你好！'}, '*');
+</code></pre>
+<p>content script中：</p>
+<pre><code class="language-javascript">window.addEventListener("message", function(e)
+{
+	console.log(e.data);
+}, false);
+</code></pre>
+<p>第二种方法：</p>
+<p><code>injected-script</code>中：</p>
+<pre><code class="language-javascript">var customEvent = document.createEvent('Event');
+customEvent.initEvent('myCustomEvent', true, true);
+function fireCustomEvent(data) {
+	hiddenDiv = document.getElementById('myCustomEventDiv');
+	hiddenDiv.innerText = data
+	hiddenDiv.dispatchEvent(customEvent);
+}
+fireCustomEvent('你好，我是普通JS！');
+</code></pre>
+<p><code>content-script.js</code>中：</p>
+<pre><code class="language-javascript">var hiddenDiv = document.getElementById('myCustomEventDiv');
+if(!hiddenDiv) {
+	hiddenDiv = document.createElement('div');
+	hiddenDiv.style.display = 'none';
+	document.body.appendChild(hiddenDiv);
+}
+hiddenDiv.addEventListener('myCustomEvent', function() {
+	var eventData = document.getElementById('myCustomEventDiv').innerText;
+	console.log('收到自定义事件消息：' + eventData);
+});
+</code></pre>
+<h2 id="长连接和短连接">长连接和短连接</h2>
+<p>其实上面已经涉及到了，这里再单独说明一下。Chrome插件中有2种通信方式，一个是短连接（<code>chrome.tabs.sendMessage</code>和<code>chrome.runtime.sendMessage</code>），一个是长连接（<code>chrome.tabs.connect</code>和<code>chrome.runtime.connect</code>）。</p>
+<p>短连接的话就是挤牙膏一样，我发送一下，你收到了再回复一下，如果对方不回复，你只能重新发，而长连接类似<code>WebSocket</code>会一直建立连接，双方可以随时互发消息。</p>
+<p>短连接上面已经有代码示例了，这里只讲一下长连接。</p>
+<p>popup.js：</p>
+<pre><code class="language-javascript">getCurrentTabId((tabId) =&gt; {
+	var port = chrome.tabs.connect(tabId, {name: 'test-connect'});
+	port.postMessage({question: '你是谁啊？'});
+	port.onMessage.addListener(function(msg) {
+		alert('收到消息：'+msg.answer);
+		if(msg.answer &amp;&amp; msg.answer.startsWith('我是'))
+		{
+			port.postMessage({question: '哦，原来是你啊！'});
+		}
+	});
+});
+</code></pre>
+<p>content-script.js：</p>
+<pre><code class="language-javascript">// 监听长连接
+chrome.runtime.onConnect.addListener(function(port) {
+	console.log(port);
+	if(port.name == 'test-connect') {
+		port.onMessage.addListener(function(msg) {
+			console.log('收到长连接消息：', msg);
+			if(msg.question == '你是谁啊？') port.postMessage({answer: '我是你爸！'});
+		});
+	}
+});
+</code></pre>
+<h1 id="其它补充">其它补充</h1>
+<h2 id="动态注入或执行js">动态注入或执行JS</h2>
+<p>虽然在<code>background</code>和<code>popup</code>中无法直接访问页面DOM，但是可以通过<code>chrome.tabs.executeScript</code>来执行脚本，从而实现访问web页面的DOM（注意，这种方式也不能直接访问页面JS）。</p>
+<p>示例<code>manifest.json</code>配置：</p>
+<pre><code class="language-javascript">{
+	"name": "动态JS注入演示",
+	...
+	"permissions": [
+		"tabs", "http://*/*", "https://*/*"
+	],
+	...
+}
+</code></pre>
+<p>JS：</p>
+<pre><code class="language-javascript">// 动态执行JS代码
+chrome.tabs.executeScript(tabId, {code: 'document.body.style.backgroundColor="red"'});
+// 动态执行JS文件
+chrome.tabs.executeScript(tabId, {file: 'some-script.js'});
+</code></pre>
+<h2 id="动态注入css">动态注入CSS</h2>
+<p>示例<code>manifest.json</code>配置：</p>
+<pre><code class="language-javascript">{
+	"name": "动态CSS注入演示",
+	...
+	"permissions": [
+		"tabs", "http://*/*", "https://*/*"
+	],
+	...
+}
+</code></pre>
+<p>JS代码：</p>
+<pre><code class="language-javascript">// 动态执行CSS代码，TODO，这里有待验证
+chrome.tabs.insertCSS(tabId, {code: 'xxx'});
+// 动态执行CSS文件
+chrome.tabs.insertCSS(tabId, {file: 'some-style.css'});
+</code></pre>
+<h2 id="获取当前窗口id">获取当前窗口ID</h2>
+<pre><code class="language-javascript">chrome.windows.getCurrent(function(currentWindow)
+{
+	console.log('当前窗口ID：' + currentWindow.id);
+});
+</code></pre>
+<h2 id="获取当前标签页id">获取当前标签页ID</h2>
+<p>一般有2种方法：</p>
+<pre><code class="language-javascript">// 获取当前选项卡ID
+function getCurrentTabId(callback)
+{
+	chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
+	{
+		if(callback) callback(tabs.length ? tabs[0].id: null);
+	});
+}
+</code></pre>
+<p>获取当前选项卡id的另一种方法，大部分时候都类似，只有少部分时候会不一样（例如当窗口最小化时）</p>
+<pre><code class="language-javascript">// 获取当前选项卡ID
+function getCurrentTabId2()
+{
+	chrome.windows.getCurrent(function(currentWindow)
+	{
+		chrome.tabs.query({active: true, windowId: currentWindow.id}, function(tabs)
+		{
+			if(callback) callback(tabs.length ? tabs[0].id: null);
+		});
+	});
+}
+</code></pre>
+<h2 id="本地存储">本地存储</h2>
+<p>本地存储建议用<code>chrome.storage</code>而不是普通的<code>localStorage</code>，区别有好几点，个人认为最重要的2点区别是：</p>
+<ul>
+<li><code>chrome.storage</code>是针对插件全局的，即使你在<code>background</code>中保存的数据，在<code>content-script</code>也能获取到；</li>
+<li><code>chrome.storage.sync</code>可以跟随当前登录用户自动同步，这台电脑修改的设置会自动同步到其它电脑，很方便，如果没有登录或者未联网则先保存到本地，等登录了再同步至网络；</li>
+</ul>
+<p>需要声明<code>storage</code>权限，有<code>chrome.storage.sync</code>和<code>chrome.storage.local</code>2种方式可供选择，使用示例如下：</p>
+<pre><code class="language-javascript">// 读取数据，第一个参数是指定要读取的key以及设置默认值
+chrome.storage.sync.get({color: 'red', age: 18}, function(items) {
+	console.log(items.color, items.age);
+});
+// 保存数据
+chrome.storage.sync.set({color: 'blue'}, function() {
+	console.log('保存成功！');
+});
+</code></pre>
+<h2 id="webrequest">webRequest</h2>
+<p>通过webRequest系列API可以对HTTP请求进行任性地修改、定制，这里通过<code>beforeRequest</code>来简单演示一下它的冰山一角：</p>
+<pre><code class="language-javascript">//manifest.json
+{
+	// 权限申请
+	"permissions":
+	[
+		"webRequest", // web请求
+		"webRequestBlocking", // 阻塞式web请求
+		"storage", // 插件本地存储
+		"http://*/*", // 可以通过executeScript或者insertCSS访问的网站
+		"https://*/*" // 可以通过executeScript或者insertCSS访问的网站
+	],
+}
+
+
+// background.js
+// 是否显示图片
+var showImage;
+chrome.storage.sync.get({showImage: true}, function(items) {
+	showImage = items.showImage;
+});
+// web请求监听，最后一个参数表示阻塞式，需单独声明权限：webRequestBlocking
+chrome.webRequest.onBeforeRequest.addListener(details =&gt; {
+	// cancel 表示取消本次请求
+	if(!showImage &amp;&amp; details.type == 'image') return {cancel: true};
+	// 简单的音视频检测
+	// 大部分网站视频的type并不是media，且视频做了防下载处理，所以这里仅仅是为了演示效果，无实际意义
+	if(details.type == 'media') {
+		chrome.notifications.create(null, {
+			type: 'basic',
+			iconUrl: 'img/icon.png',
+			title: '检测到音视频',
+			message: '音视频地址：' + details.url,
+		});
+	}
+}, {urls: ["&lt;all_urls&gt;"]}, ["blocking"]);
+</code></pre>
+<h2 id="国际化">国际化</h2>
+<p>插件根目录新建一个名为<code>_locales</code>的文件夹，再在下面新建一些语言的文件夹，如<code>en</code>、<code>zh_CN</code>、<code>zh_TW</code>，然后再在每个文件夹放入一个<code>messages.json</code>，同时必须在清单文件中设置<code>default_locale</code>。</p>
+<p><code>_locales\en\messages.json</code>内容：</p>
+<pre><code class="language-javascript">{
+	"pluginDesc": {"message": "A simple chrome extension demo"},
+	"helloWorld": {"message": "Hello World!"}
+}
+</code></pre>
+<p><code>_locales\zh_CN\messages.json</code>内容：</p>
+<pre><code class="language-javascript">{
+	"pluginDesc": {"message": "一个简单的Chrome插件demo"},
+	"helloWorld": {"message": "你好啊，世界！"}
+}
+</code></pre>
+<p>在<code>manifest.json</code>和<code>CSS</code>文件中通过<code>__MSG_messagename__</code>引入，如：</p>
+<pre><code class="language-javascript">{
+	"description": "__MSG_pluginDesc__",
+	// 默认语言
+	"default_locale": "zh_CN",
+}
+</code></pre>
+<p>JS中则直接<code>chrome.i18n.getMessage("helloWorld")</code>。</p>
+<p>测试时，通过给chrome建立一个不同的快捷方式<code>chrome.exe --lang=en</code>来切换语言，如：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102158259-417770023.png" alt="" loading="lazy"></p>
+<p>英文效果：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102210868-1502746521.png" alt="" loading="lazy"></p>
+<p>中文效果：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102221478-1089926751.png" alt="" loading="lazy"></p>
+<h2 id="api总结">API总结</h2>
+<p>比较常用用的一些API系列：</p>
+<ul>
+<li>chrome.tabs</li>
+<li>chrome.runtime</li>
+<li>chrome.webRequest</li>
+<li>chrome.window</li>
+<li>chrome.storage</li>
+<li>chrome.contextMenus</li>
+<li>chrome.devtools</li>
+<li>chrome.extension</li>
+</ul>
+<h1 id="经验总结">经验总结</h1>
+<h2 id="查看已安装插件路径">查看已安装插件路径</h2>
+<p>已安装的插件源码路径：<code>C:\Users\用户名\AppData\Local\Google\Chrome\User Data\Default\Extensions</code>，每一个插件被放在以插件ID为名的文件夹里面，想要学习某个插件的某个功能是如何实现的，看人家的源码是最好的方法了：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102256712-51940037.png" alt="" loading="lazy"></p>
+<p>如何查看某个插件的ID？进入 chrome://extensions ，然后勾线开发者模式即可看到了。</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102308431-360409003.png" alt="" loading="lazy"></p>
+<h2 id="特别注意background的报错">特别注意background的报错</h2>
+<p>很多时候你发现你的代码会莫名其妙的失效，找来找去又找不到原因，这时打开background的控制台才发现原来某个地方写错了导致代码没生效，正式由于background报错的隐蔽性(需要主动打开对应的控制台才能看到错误)，所以特别注意这点。</p>
+<h2 id="如何让popup页面不关闭">如何让popup页面不关闭</h2>
+<p>在对popup页面审查元素的时候popup会被强制打开无法关闭，只有控制台关闭了才可以关闭popup，原因很简单：如果popup关闭了控制台就没用了。这种方法在某些情况下很实用！</p>
+<h2 id="不支持内联javascript的执行">不支持内联JavaScript的执行</h2>
+<p>也就是不支持将js直接写在html中，比如：</p>
+<pre><code class="language-html">&lt;input id="btn" type="button" value="收藏" onclick="test()"/&gt;
+</code></pre>
+<p>报错如下：</p>
+<pre><code>Refused to execute inline event handler because it violates the following Content Security Policy directive: "script-src 'self' blob: filesystem: chrome-extension-resource:". Either the 'unsafe-inline' keyword, a hash ('sha256-...'), or a nonce ('nonce-...') is required to enable inline execution.
+</code></pre>
+<p>解决方法就是用JS绑定事件：</p>
+<pre><code class="language-javascript">$('#btn').on('click', function(){alert('测试')});
+</code></pre>
+<p>另外，对于A标签，这样写<code>href="javascript:;"</code>然后用JS绑定事件虽然控制台会报错，但是不受影响，当然强迫症患者受不了的话只能写成<code>href="#"</code>了。</p>
+<p>如果这样写：</p>
+<pre><code>&lt;a href="javascript:;" id="get_secret"&gt;请求secret&lt;/a&gt;
+</code></pre>
+<p>报错如下：</p>
+<pre><code>Refused to execute JavaScript URL because it violates the following Content Security Policy directive: "script-src 'self' blob: filesystem: chrome-extension-resource:". Either the 'unsafe-inline' keyword, a hash ('sha256-...'), or a nonce ('nonce-...') is required to enable inline execution.
+</code></pre>
+<h2 id="注入css的时候必须小心">注入CSS的时候必须小心</h2>
+<p>由于通过<code>content_scripts</code>注入的CSS优先级非常高，几乎仅次于浏览器默认样式，稍不注意可能就会影响一些网站的展示效果，所以尽量不要写一些影响全局的样式。</p>
+<p>之所以强调这个，是因为这个带来的问题非常隐蔽，不太容易找到，可能你正在写某个网页，昨天样式还是好好的，怎么今天就突然不行了？然后你辛辛苦苦找来找去，找了半天才发现竟然是因为插件里面的一个样式影响的！</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102324665-787100296.png" alt="" loading="lazy"></p>
+<h1 id="打包与发布">打包与发布</h1>
+<p>打包的话直接在插件管理页有一个打包按钮：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102349728-1968586800.png" alt="" loading="lazy"></p>
+<p>然后会生成一个<code>.crx</code>文件，要发布到Google应用商店的话需要先登录你的Google账号，然后花5个$注册为开发者，本人太穷，就懒得亲自验证了，有发布需求的自己去整吧。</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102401665-879882813.png" alt="" loading="lazy"></p>
+<h1 id="参考">参考</h1>
+<h2 id="官方资料">官方资料</h2>
+<p>推荐查看官方文档，虽然是英文，但是全且新，国内的中文资料都比较旧（注意以下全部需要翻墙）：</p>
+<ul>
+<li><a href="https://developer.chrome.com/extensions" target="_blank">Chrome插件官方文档主页</a></li>
+<li><a href="https://developer.chrome.com/extensions/samples" target="_blank">Chrome插件官方示例</a></li>
+<li><a href="https://developer.chrome.com/extensions/manifest" target="_blank">manifest清单文件</a></li>
+<li><a href="https://developer.chrome.com/extensions/permissions" target="_blank">permissions权限</a></li>
+<li><a href="https://developer.chrome.com/extensions/api_index" target="_blank">chrome.xxx.api文档</a></li>
+<li><a href="https://developer.chrome.com/extensions/match_patterns" target="_blank">模糊匹配规则语法详解</a></li>
+</ul>
+<h2 id="第三方资料">第三方资料</h2>
+<p>部分中文资料，不是特别推荐：</p>
+<ul>
+<li><a href="http://open.se.360.cn/open/extension_dev/overview.html" target="_blank">360安全浏览器开发文档</a></li>
+<li><a href="http://open.chrome.360.cn/extension_dev/overview.html" target="_blank">360极速浏览器Chrome扩展开发文档</a></li>
+<li><a href="http://www.cnblogs.com/champagne/p/" target="_blank">Chrome扩展开发极客系列博客</a></li>
+</ul>
+<h1 id="附图">附图</h1>
+<p>附图：Chrome高清png格式logo：</p>
+<p><img src="https://images2015.cnblogs.com/blog/352797/201707/352797-20170711102416728-1289897384.png" alt="" loading="lazy"></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2017-07-11 09:30</span>&nbsp;
+<a href="https://www.cnblogs.com/liuxianan/">我是小茗同学</a>&nbsp;
+阅读(<span id="post_view_count">372969</span>)&nbsp;
+评论(<span id="post_comment_count">149</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=7148964" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(7148964);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 117633, cb_blogApp = 'liuxianan', cb_blogUserGuid = '876891be-7913-e111-b422-842b2b196315';
+    var cb_entryId = 7148964, cb_entryCreatedDate = '2017-07-11 09:30', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 我是小茗同学
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <link href="https://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="https://files.cnblogs.com/files/liuxianan/markdown-toc.css?1=1" rel="stylesheet">
+<script type="text/javascript" src="https://files.cnblogs.com/files/liuxianan/markdown-toc.js?t=20180417"></script>
+<script>
+
+// 图片懒加载
+;(function(){
+
+ $('#cnblogs_post_body img').each(function(idx, img) {
+    var res = /W(\d+)xH(\d+)_?$/g.exec(img.alt);
+    if(!res) return false;
+    img.dataset.lazySrc = img.src;
+    img.style.width = res[1] + 'px';
+    img.style.height = res[2] + 'px';
+    img.src = 'http://res.haoji.me/blog/images/transparent.gif';
+})
+
+})();
+
+/**
+ * 图片懒加载插件，与绝大多数同类插件不同的是，本插件同时支持img的src和div的背景图懒加载
+ * 将图片以背景图的方式展示到div的好处是可以轻松实现图片不变形，所以背景图懒加载的需求还是比较常见的
+ * 使用方法：将页面中展示图片的div或者img的图片地址以data-lazy-src="xxx"形式指定
+ * 然后引入本JS即可，无需任何其他代码，支持动态生成内容的懒加载，但是每次动态增加内容之后需主动调用一句：
+ * $(window).scroll();
+ * @start 2016-08-18
+ * @last 2016-09-08
+ * @author lxa
+ */
+;(function($)
+{
+	$(window).on('scroll resize load', function(e)
+	{
+		var notFoundCount = 0, maxNotFound = 2, screenHeight = $(window).height();
+		$('[data-lazy-src]').each(function()
+		{
+			var pos = this.getBoundingClientRect();
+			if(pos.bottom <= 0) return true; // 如果当前图片在视野上方，继续往下查找
+			if(pos.top >= screenHeight) return (notFoundCount++) < maxNotFound; // 如果连续超过 maxNotFound 张图片都在视野下方，停止查找，注意只有从上到下的图片布局才能这样判断
+			var src = this.dataset.lazySrc;
+			if(!src) return;
+			if(this.nodeName === 'IMG') this.src = src;
+			else this.style.backgroundImage = 'url(' + src + ')';
+			this.removeAttribute('data-lazy-src');
+		});
+	});
+})(jQuery);
+
+
+
+$.fn.extend(
+	{
+		/**
+		 * 给H1-H6添加数字导航，如1.3.6
+		 * 注意，必须在getMarkdownTOC()方法之后调用本方法，否则获取到的内容会有多余的类似“1.2.1”这样的东西
+		 */
+		addNumberBeforeHeaderline: function(ignoreH1)
+		{
+			var list = [], elements = this.find('h1,h2,h3,h4,h5,h6');			
+			for(var i=0; i<elements.size(); i++)
+			{
+				var level = parseInt(elements[i].nodeName.substr(1)); // 提取h1~h6中的数字
+				// 这一步是为了修正一些可能不正确的写法，比如H1后面紧跟H3，那么我们将在中间自动补上H2
+				for(var j = (list[list.length-1] || [0])[0] + 1; j<level; j++) list.push([j, -1]);
+				list.push([level, i]);
+			}
+			var h = []; // 记录每一个层级最高的索引
+			for(var i=0; i<list.length; i++)
+			{
+				var level = list[i][0];
+				var result = '';
+				h[level] = (h[level] || 0) + 1; // 从0开始自增
+				for(var j=level+1; j<=6; j++) h[j] = 0; // 例如，h2自增后，h2后面的h3-h6都要归零
+				for(var j=1; j<=level; j++) result += h[j] + '.';
+				if(ignoreH1 && level == 1) continue;
+				$(elements[list[i][1]]).prepend(result + ' ');
+			}
+		}
+       });
+
+
+
+$(window).on('load', function()
+{
+    if($('#tbCommentAuthor').val() == '我是小茗同学') $('#cnzz_wrapper').css('display', 'block');
+
+    setTimeout(function()
+    {
+        var count = parseInt($('#digg_count').html());
+        var maxCount = 15;
+        var hasDing =  $('#digg_tips').text().indexOf('您已推荐过')>=0;
+       if(!hasDing) $('.diggit').show();
+    if($('#tbCommentAuthor').length>0 && $('#tbCommentAuthor').val() !== '我是小茗同学' && !hasDing  && count < maxCount)
+    {
+        var fn = $('#div_digg > .diggit').attr('onclick');
+        if(parseInt(Math.random()*10)<2) {
+          //eval('('+fn+')');
+          //$('.diggit').remove();
+        } else $('.diggit').show();
+    } else {
+      $('.diggit').show();
+   }
+
+    }, 1500);
+
+});
+$(function()
+{
+    $('body').initMarkdownTOC($('.cnblogs-markdown'));
+    $('.cnblogs-markdown').addNumberBeforeHeaderline(true);
+    $('#blogTitle h1').addClass('bounceInLeft animated');
+    $('#blogTitle h2').addClass('bounceInRight animated');
+    $('.cnblogs-markdown a').attr('target', '_blank'); // 所有链接新窗口打开
+    // 本人时显示最近评论
+    if($('#tbCommentAuthor').val() == '我是小茗同学') $('#sidebar_recentcomments ').show();
+    // 删除反对按钮
+    $('.buryit').remove();
+});
+function initCommentData()
+{
+    $('.feedbackItem').each(function()
+    {
+        var text = $(this).find('.feedbackListSubtitle .layer').text();
+        // 将楼层信息放到data里面
+        // $(this).find('.blog_comment_body').attr('data-louceng', text.replace(/^#/g, ''));
+        if($(this).find('.feedbackListSubtitle .louzhu').length>0) $(this).addClass('myself');
+		var avatar = $(this).find('> .feedbackCon > span').html() || 'http://pic.cnitblog.com/face/sample_face.gif';
+		$(this).find('> .feedbackCon > .blog_comment_body').append('<img class="user-avatar" src="'+avatar+'"/>')
+    });
+}
+
+$(document).ajaxComplete(function(event, xhr, settings) {
+ // 监听获取评论ajax事件
+ if(settings.url.indexOf('/ajax/GetComments.aspx') >= 0) {
+    initCommentData();
+}
+});
+
+// 底部增加快速评论
+;(function()
+{
+	var div = document.createElement('a');
+	div.className = 'fast-comment';
+	div.innerHTML = '查看<br>评论';
+	div.href = '#blog-comments-placeholder';
+	document.body.appendChild(div);
+})();
+</script>
+
+
+<div id="cnzz_wrapper">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260206164'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260206164%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+    </div>
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8EklyHYHyB5Oj4onWtxTnxZdIEqw5oaCEwoQ51sByzxHP40nasyPf0xPg-4V0xx1n57QsyTi72ryEs2gYCrLNzC7eEjNIIcEDh3Idjf5zmc11-Y5TljtsZu6khPDaZQl8wk22q8e3lsQJKIQpMJSwFk" />
+</body>
+</html>

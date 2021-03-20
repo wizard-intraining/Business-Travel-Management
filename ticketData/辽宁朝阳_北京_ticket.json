@@ -1,0 +1,88 @@
+{
+  "from": "辽宁朝阳",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616233855150,
+  "trainList": [
+    {
+      "no": "G3662",
+      "startStation": "辽宁朝阳",
+      "endStation": "北京朝阳",
+      "startTime": "09:26",
+      "duration": "01:53",
+      "price": 206
+    },
+    {
+      "no": "G912",
+      "startStation": "辽宁朝阳",
+      "endStation": "北京朝阳",
+      "startTime": "11:04",
+      "duration": "02:08",
+      "price": 206
+    },
+    {
+      "no": "G914",
+      "startStation": "辽宁朝阳",
+      "endStation": "北京朝阳",
+      "startTime": "13:50",
+      "duration": "01:59",
+      "price": 206
+    },
+    {
+      "no": "G3664",
+      "startStation": "辽宁朝阳",
+      "endStation": "北京朝阳",
+      "startTime": "15:19",
+      "duration": "01:54",
+      "price": 206
+    },
+    {
+      "no": "G936",
+      "startStation": "辽宁朝阳",
+      "endStation": "北京朝阳",
+      "startTime": "16:32",
+      "duration": "02:00",
+      "price": 206
+    },
+    {
+      "no": "G958",
+      "startStation": "辽宁朝阳",
+      "endStation": "北京朝阳",
+      "startTime": "17:12",
+      "duration": "01:53",
+      "price": 185
+    },
+    {
+      "no": "G3672",
+      "startStation": "辽宁朝阳",
+      "endStation": "北京朝阳",
+      "startTime": "18:33",
+      "duration": "01:59",
+      "price": 196
+    },
+    {
+      "no": "G922",
+      "startStation": "辽宁朝阳",
+      "endStation": "北京朝阳",
+      "startTime": "19:50",
+      "duration": "02:01",
+      "price": 196
+    },
+    {
+      "no": "G938",
+      "startStation": "辽宁朝阳",
+      "endStation": "北京朝阳",
+      "startTime": "20:22",
+      "duration": "02:00",
+      "price": 166
+    },
+    {
+      "no": "G924",
+      "startStation": "辽宁朝阳",
+      "endStation": "北京朝阳",
+      "startTime": "20:51",
+      "duration": "01:53",
+      "price": 158
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "from": "西安",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616235299617,
+  "trainList": [
+    {
+      "no": "G652",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "08:22",
+      "duration": "05:05",
+      "price": 515.5
+    },
+    {
+      "no": "G26",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "09:20",
+      "duration": "04:30",
+      "price": 515.5
+    },
+    {
+      "no": "G672",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "09:33",
+      "duration": "05:38",
+      "price": 515.5
+    },
+    {
+      "no": "G656",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "10:16",
+      "duration": "05:17",
+      "price": 515.5
+    },
+    {
+      "no": "G350",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "10:22",
+      "duration": "04:24",
+      "price": 515.5
+    },
+    {
+      "no": "G872",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "11:15",
+      "duration": "05:36",
+      "price": 515.5
+    },
+    {
+      "no": "G658",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "12:53",
+      "duration": "05:33",
+      "price": 515.5
+    },
+    {
+      "no": "G430",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "13:19",
+      "duration": "05:34",
+      "price": 515.5
+    },
+    {
+      "no": "G88",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "13:32",
+      "duration": "04:23",
+      "price": 515.5
+    },
+    {
+      "no": "G574",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "14:10",
+      "duration": "05:44",
+      "price": 515.5
+    },
+    {
+      "no": "G664",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "14:34",
+      "duration": "05:46",
+      "price": 515.5
+    },
+    {
+      "no": "G308",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "14:55",
+      "duration": "05:43",
+      "price": 515.5
+    },
+    {
+      "no": "G666",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "16:05",
+      "duration": "05:26",
+      "price": 515.5
+    },
+    {
+      "no": "G438",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "17:03",
+      "duration": "04:39",
+      "price": 515.5
+    },
+    {
+      "no": "G674",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "17:24",
+      "duration": "05:45",
+      "price": 515.5
+    },
+    {
+      "no": "T232",
+      "startStation": "西安",
+      "endStation": "北京西",
+      "startTime": "17:26",
+      "duration": "12:42",
+      "price": 254.5
+    },
+    {
+      "no": "G668",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "17:38",
+      "duration": "05:20",
+      "price": 515.5
+    },
+    {
+      "no": "G670",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "18:02",
+      "duration": "05:27",
+      "price": 515.5
+    },
+    {
+      "no": "G90",
+      "startStation": "西安北",
+      "endStation": "北京西",
+      "startTime": "18:26",
+      "duration": "04:26",
+      "price": 515.5
+    },
+    {
+      "no": "Z44",
+      "startStation": "西安",
+      "endStation": "北京西",
+      "startTime": "18:35",
+      "duration": "13:47",
+      "price": 268.5
+    },
+    {
+      "no": "Z20",
+      "startStation": "西安",
+      "endStation": "北京西",
+      "startTime": "18:54",
+      "duration": "12:04",
+      "price": 254.5
+    },
+    {
+      "no": "T42",
+      "startStation": "西安",
+      "endStation": "北京西",
+      "startTime": "19:39",
+      "duration": "13:52",
+      "price": 268.5
+    },
+    {
+      "no": "T56",
+      "startStation": "西安",
+      "endStation": "北京西",
+      "startTime": "20:30",
+      "duration": "14:15",
+      "price": 254.5
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "from": "西安",
+  "to": "白城",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616244625958,
+  "trainList": [
+    {
+      "no": "K998",
+      "startStation": "西安南",
+      "endStation": "白城",
+      "startTime": "07:54",
+      "duration": "35:06",
+      "price": 455.5
+    }
+  ]
+}

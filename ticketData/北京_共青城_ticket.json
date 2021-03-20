@@ -1,0 +1,24 @@
+{
+  "from": "北京",
+  "to": "共青城",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616237838562,
+  "trainList": [
+    {
+      "no": "G491",
+      "startStation": "北京西",
+      "endStation": "共青城",
+      "startTime": "12:33",
+      "duration": "07:30",
+      "price": 604.5
+    },
+    {
+      "no": "K571",
+      "startStation": "北京西",
+      "endStation": "共青城",
+      "startTime": "16:53",
+      "duration": "17:21",
+      "price": 288.5
+    }
+  ]
+}

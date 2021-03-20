@@ -1,0 +1,32 @@
+{
+  "from": "北京",
+  "to": "西宁",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616237607962,
+  "trainList": [
+    {
+      "no": "T175",
+      "startStation": "北京西",
+      "endStation": "西宁",
+      "startTime": "13:05",
+      "duration": "21:29",
+      "price": 353
+    },
+    {
+      "no": "Z151",
+      "startStation": "北京西",
+      "endStation": "西宁",
+      "startTime": "16:03",
+      "duration": "22:24",
+      "price": 399
+    },
+    {
+      "no": "Z21",
+      "startStation": "北京西",
+      "endStation": "西宁",
+      "startTime": "20:00",
+      "duration": "18:57",
+      "price": 353
+    }
+  ]
+}

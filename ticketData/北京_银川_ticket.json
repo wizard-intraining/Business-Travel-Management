@@ -1,0 +1,64 @@
+{
+  "from": "北京",
+  "to": "银川",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616238719951,
+  "trainList": [
+    {
+      "no": "K1177",
+      "startStation": "北京",
+      "endStation": "银川",
+      "startTime": "13:30",
+      "duration": "18:35",
+      "price": 280.5
+    },
+    {
+      "no": "G871",
+      "startStation": "北京西",
+      "endStation": "银川",
+      "startTime": "13:50",
+      "duration": "09:25",
+      "price": 760.5
+    },
+    {
+      "no": "Z277",
+      "startStation": "北京西",
+      "endStation": "灵武",
+      "startTime": "20:06",
+      "duration": "10:15",
+      "price": 254.5
+    },
+    {
+      "no": "Z277",
+      "startStation": "北京西",
+      "endStation": "银川",
+      "startTime": "20:06",
+      "duration": "10:50",
+      "price": 261.5
+    },
+    {
+      "no": "K41",
+      "startStation": "北京",
+      "endStation": "银川",
+      "startTime": "20:45",
+      "duration": "18:14",
+      "price": 280.5
+    },
+    {
+      "no": "Z179",
+      "startStation": "北京西",
+      "endStation": "银川",
+      "startTime": "21:04",
+      "duration": "16:52",
+      "price": 280.5
+    },
+    {
+      "no": "K885",
+      "startStation": "北京",
+      "endStation": "银川",
+      "startTime": "23:43",
+      "duration": "18:51",
+      "price": 280.5
+    }
+  ]
+}

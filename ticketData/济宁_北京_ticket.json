@@ -1,0 +1,16 @@
+{
+  "from": "济宁",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616233929563,
+  "trainList": [
+    {
+      "no": "K1903",
+      "startStation": "济宁",
+      "endStation": "北京",
+      "startTime": "12:55",
+      "duration": "08:54",
+      "price": 163
+    }
+  ]
+}

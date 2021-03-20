@@ -1,0 +1,120 @@
+{
+  "from": "南京",
+  "to": "福州",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616243956969,
+  "trainList": [
+    {
+      "no": "D3239",
+      "startStation": "南京南",
+      "endStation": "福州",
+      "startTime": "06:14",
+      "duration": "06:23",
+      "price": 363
+    },
+    {
+      "no": "D2281",
+      "startStation": "南京南",
+      "endStation": "福州南",
+      "startTime": "06:32",
+      "duration": "08:53",
+      "price": 442
+    },
+    {
+      "no": "G1667",
+      "startStation": "南京南",
+      "endStation": "福州",
+      "startTime": "06:57",
+      "duration": "05:32",
+      "price": 410
+    },
+    {
+      "no": "G1667",
+      "startStation": "南京南",
+      "endStation": "福州南",
+      "startTime": "06:57",
+      "duration": "05:58",
+      "price": 415.5
+    },
+    {
+      "no": "D3295",
+      "startStation": "南京南",
+      "endStation": "福州南",
+      "startTime": "07:51",
+      "duration": "07:07",
+      "price": 363
+    },
+    {
+      "no": "D3135",
+      "startStation": "南京南",
+      "endStation": "福州南",
+      "startTime": "08:09",
+      "duration": "09:15",
+      "price": 442
+    },
+    {
+      "no": "G1661",
+      "startStation": "南京南",
+      "endStation": "福州",
+      "startTime": "08:30",
+      "duration": "05:23",
+      "price": 410
+    },
+    {
+      "no": "G1661",
+      "startStation": "南京南",
+      "endStation": "福州南",
+      "startTime": "08:30",
+      "duration": "05:47",
+      "price": 415.5
+    },
+    {
+      "no": "D2293",
+      "startStation": "南京南",
+      "endStation": "福州南",
+      "startTime": "10:52",
+      "duration": "07:02",
+      "price": 363
+    },
+    {
+      "no": "D3141",
+      "startStation": "南京",
+      "endStation": "福州南",
+      "startTime": "11:19",
+      "duration": "08:08",
+      "price": 438
+    },
+    {
+      "no": "G55",
+      "startStation": "南京南",
+      "endStation": "福州",
+      "startTime": "12:44",
+      "duration": "06:13",
+      "price": 388.5
+    },
+    {
+      "no": "G55",
+      "startStation": "南京南",
+      "endStation": "福州南",
+      "startTime": "12:44",
+      "duration": "06:46",
+      "price": 396.5
+    },
+    {
+      "no": "D3235",
+      "startStation": "南京南",
+      "endStation": "福州南",
+      "startTime": "15:08",
+      "duration": "07:18",
+      "price": 314
+    },
+    {
+      "no": "G1677",
+      "startStation": "南京南",
+      "endStation": "福州",
+      "startTime": "16:29",
+      "duration": "05:09",
+      "price": 410
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "from": "赤峰",
+  "to": "辽宁朝阳",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616245215164,
+  "trainList": [
+    {
+      "no": "G8248",
+      "startStation": "赤峰",
+      "endStation": "辽宁朝阳",
+      "startTime": "07:39",
+      "duration": "01:29",
+      "price": 90
+    },
+    {
+      "no": "G8208",
+      "startStation": "赤峰",
+      "endStation": "辽宁朝阳",
+      "startTime": "14:16",
+      "duration": "01:17",
+      "price": 87
+    },
+    {
+      "no": "G8218",
+      "startStation": "赤峰",
+      "endStation": "辽宁朝阳",
+      "startTime": "18:30",
+      "duration": "01:29",
+      "price": 75
+    }
+  ]
+}

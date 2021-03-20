@@ -4,7 +4,8 @@
     (request, sender, sendResponse) => {
       switch (request.id) {
         case 'uploadStationLookup':
-          console.log(request.data)
+          fetchTicket(JSON.parse(request.data),
+            request.startI, request.startJ, request.trainDate)
           break
         default:
           break
@@ -60,5 +61,62 @@
       loop(1) // 跳过第一个【热门城市】的标签
     }
     console.log('click the fromStationText input!')
+  }
+  // 查询所有站点之间的车票
+  const fetchTicket = (locationDic, startI, startJ, trainDate) => {
+    const keys = Object.keys(locationDic)
+    let [i, j] = [startI, startJ] // 遍历起始位置
+    let r = false // 是否调换起始位置
+    const oldSaveAction = query12306.saveResult
+    query12306.saveResult = function (trainList) {
+      this.querying = false
+      console.log(`${this.from} 至 ${this.to} 完成查询`)
+      if (trainList.length > 0) {
+        console.save({
+          from: this.from,
+          to: this.to,
+          trainDate: this.trainDate,
+          timestamp: this.queryBeginTime.getTime(),
+          trainList: trainList
+        }, `${this.from}_${this.to}_ticket.json`)
+      } else {
+        chrome.runtime.sendMessage({
+          id: 'saveNoDirect',
+          data: {
+            from: this.from,
+            to: this.to,
+          },
+        })
+      }
+      // 尝试查询下两个站点间的
+      let nextFrom, nextTo
+      r = !r
+      if (r) {
+        [nextFrom, nextTo] =
+          [locationDic[keys[j]], locationDic[keys[i]]]
+      } else {
+        j += 1
+        if (j >= keys.length) {
+          i += 1
+          j = i + 1
+          if (j >= keys.length) {
+            console.log('已尝试下载所有车票')
+            query12306.saveResult = oldSaveAction
+            return
+          }
+        }
+        [nextFrom, nextTo] =
+          [locationDic[keys[i]], locationDic[keys[j]]]
+      }
+      setTimeout(() => {
+        query12306.queryTicket(nextFrom, nextTo, trainDate)
+      }, 5000)
+    }
+    // 启动查询
+    query12306.initPage()
+    query12306.queryTicket(
+      locationDic[keys[i]],
+      locationDic[keys[j]],
+      trainDate)
   }
 }

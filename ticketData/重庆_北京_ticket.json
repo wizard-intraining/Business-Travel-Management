@@ -1,0 +1,72 @@
+{
+  "from": "重庆",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616237712121,
+  "trainList": [
+    {
+      "no": "G574",
+      "startStation": "重庆西",
+      "endStation": "北京西",
+      "startTime": "08:40",
+      "duration": "11:14",
+      "price": 924.5
+    },
+    {
+      "no": "G310",
+      "startStation": "重庆北",
+      "endStation": "北京西",
+      "startTime": "09:25",
+      "duration": "12:21",
+      "price": 800.5
+    },
+    {
+      "no": "T10",
+      "startStation": "重庆西",
+      "endStation": "北京西",
+      "startTime": "10:01",
+      "duration": "25:11",
+      "price": 389
+    },
+    {
+      "no": "Z96",
+      "startStation": "重庆西",
+      "endStation": "北京西",
+      "startTime": "11:33",
+      "duration": "23:18",
+      "price": 414
+    },
+    {
+      "no": "Z50",
+      "startStation": "重庆北",
+      "endStation": "北京西",
+      "startTime": "14:37",
+      "duration": "19:26",
+      "price": 389
+    },
+    {
+      "no": "Z4",
+      "startStation": "重庆北",
+      "endStation": "北京西",
+      "startTime": "15:21",
+      "duration": "18:50",
+      "price": 389
+    },
+    {
+      "no": "K508",
+      "startStation": "重庆西",
+      "endStation": "北京西",
+      "startTime": "21:00",
+      "duration": "24:34",
+      "price": 370
+    },
+    {
+      "no": "K590",
+      "startStation": "重庆",
+      "endStation": "北京西",
+      "startTime": "22:13",
+      "duration": "31:05",
+      "price": 399
+    }
+  ]
+}

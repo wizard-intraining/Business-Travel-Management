@@ -1,0 +1,192 @@
+{
+  "from": "西安",
+  "to": "南京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616239222955,
+  "trainList": [
+    {
+      "no": "G1914",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "06:28",
+      "duration": "05:31",
+      "price": 540
+    },
+    {
+      "no": "G1900",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "07:40",
+      "duration": "05:35",
+      "price": 540
+    },
+    {
+      "no": "K292",
+      "startStation": "西安南",
+      "endStation": "南京",
+      "startTime": "08:26",
+      "duration": "17:18",
+      "price": 261.5
+    },
+    {
+      "no": "G362",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "08:51",
+      "duration": "04:43",
+      "price": 546
+    },
+    {
+      "no": "G3154",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "08:57",
+      "duration": "06:20",
+      "price": 577.5
+    },
+    {
+      "no": "G1918",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "09:38",
+      "duration": "05:29",
+      "price": 540
+    },
+    {
+      "no": "G1922",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "10:37",
+      "duration": "05:28",
+      "price": 540
+    },
+    {
+      "no": "K362",
+      "startStation": "西安",
+      "endStation": "南京",
+      "startTime": "10:45",
+      "duration": "15:19",
+      "price": 261.5
+    },
+    {
+      "no": "G3166",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "11:43",
+      "duration": "06:22",
+      "price": 581.5
+    },
+    {
+      "no": "G1926",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "12:30",
+      "duration": "05:30",
+      "price": 540
+    },
+    {
+      "no": "G1972",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "14:05",
+      "duration": "05:49",
+      "price": 546
+    },
+    {
+      "no": "G3182",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "14:20",
+      "duration": "06:36",
+      "price": 577.5
+    },
+    {
+      "no": "G1938",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "15:10",
+      "duration": "04:56",
+      "price": 540
+    },
+    {
+      "no": "G1976",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "15:15",
+      "duration": "05:40",
+      "price": 540
+    },
+    {
+      "no": "G1942",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "15:53",
+      "duration": "06:00",
+      "price": 540
+    },
+    {
+      "no": "G1888",
+      "startStation": "西安北",
+      "endStation": "南京南",
+      "startTime": "16:10",
+      "duration": "05:50",
+      "price": 540
+    },
+    {
+      "no": "K558",
+      "startStation": "西安",
+      "endStation": "南京",
+      "startTime": "17:13",
+      "duration": "16:25",
+      "price": 261.5
+    },
+    {
+      "no": "Z88",
+      "startStation": "西安",
+      "endStation": "南京",
+      "startTime": "19:10",
+      "duration": "12:08",
+      "price": 261.5
+    },
+    {
+      "no": "D308",
+      "startStation": "西安北",
+      "endStation": "南京",
+      "startTime": "19:35",
+      "duration": "07:57",
+      "price": 370.5
+    },
+    {
+      "no": "Z254",
+      "startStation": "西安",
+      "endStation": "南京",
+      "startTime": "21:35",
+      "duration": "12:18",
+      "price": 261.5
+    },
+    {
+      "no": "Z218",
+      "startStation": "西安",
+      "endStation": "南京",
+      "startTime": "23:21",
+      "duration": "12:42",
+      "price": 261.5
+    },
+    {
+      "no": "T114",
+      "startStation": "西安",
+      "endStation": "南京",
+      "startTime": "23:27",
+      "duration": "13:38",
+      "price": 261.5
+    },
+    {
+      "no": "Z306",
+      "startStation": "西安",
+      "endStation": "南京",
+      "startTime": "23:33",
+      "duration": "13:08",
+      "price": 261.5
+    }
+  ]
+}

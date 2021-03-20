@@ -2,16 +2,6 @@
 // 使用此对象进行查询
 const query12306 = {
   stationDictionary: {}, // 在 initializeStationDictionary.js 中初始化
-  queryAll: function () {
-    const keys = Object.keys(this.stationDictionary)
-    let [iFrom, iTo] = [0, 1]
-    for (; iFrom < keys.length - 1; iFrom++) {
-      for (; iTo < keys.length; iTo++) {
-        this.queryTicket(keys[iFrom], keys[iTo], '2021-03-20')
-      }
-      iTo = iFrom + 2
-    }
-  },
   querying: false,
   from: '',
   to: '',
@@ -22,7 +12,7 @@ const query12306 = {
    */
   initPage: function () {
     document.getElementById('qd_closeDefaultWarningWindowDialog_id').click() // 关闭温馨提示
-    document.getElementById('avail_ticket').click() // 显示全部可预订车次
+    // document.getElementById('avail_ticket').click() // 显示全部可预订车次
     document.getElementById('train_date').removeAttribute('readonly') // 移除出发日只能选不能填的限制
   },
   /**
@@ -58,7 +48,7 @@ const query12306 = {
         clearInterval(check)
         this.parseResult()
       }
-    }, 200)
+    }, 500)
   },
   /**
    * 解析页面中的车票信息
@@ -98,7 +88,7 @@ const query12306 = {
             this.saveResult(trainList)
           } else {
             console.log('push')
-            setTimeout(() => loop(i + 1), 5000)     // 请求票价太快会被限制
+            setTimeout(() => loop(i + 1), 5000) // 请求票价太快会被限制
           }
         }
       }).observe(priceRow, { attributes: true })
@@ -111,8 +101,8 @@ const query12306 = {
    * @param {Array} trainList 车次信息数组
    */
   saveResult: function (trainList) {
-    console.log('finish !!!')
     this.querying = false
+    console.log('finish !!!')
     console.save({
       from: this.from,
       to: this.to,

@@ -1,0 +1,56 @@
+{
+  "from": "兰州",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616235480966,
+  "trainList": [
+    {
+      "no": "K886",
+      "startStation": "兰州西",
+      "endStation": "北京",
+      "startTime": "08:27",
+      "duration": "26:58",
+      "price": 353
+    },
+    {
+      "no": "K886",
+      "startStation": "兰州",
+      "endStation": "北京",
+      "startTime": "09:02",
+      "duration": "26:23",
+      "price": 353
+    },
+    {
+      "no": "G430",
+      "startStation": "兰州西",
+      "endStation": "北京西",
+      "startTime": "09:54",
+      "duration": "08:59",
+      "price": 700
+    },
+    {
+      "no": "G438",
+      "startStation": "兰州西",
+      "endStation": "北京西",
+      "startTime": "14:29",
+      "duration": "07:13",
+      "price": 700
+    },
+    {
+      "no": "Z130",
+      "startStation": "兰州",
+      "endStation": "北京西",
+      "startTime": "17:18",
+      "duration": "21:14",
+      "price": 363
+    },
+    {
+      "no": "Z56",
+      "startStation": "兰州",
+      "endStation": "北京西",
+      "startTime": "21:11",
+      "duration": "16:27",
+      "price": 322.5
+    }
+  ]
+}

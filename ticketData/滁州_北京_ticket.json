@@ -1,0 +1,96 @@
+{
+  "from": "滁州",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616238649971,
+  "trainList": [
+    {
+      "no": "G204",
+      "startStation": "滁州",
+      "endStation": "北京南",
+      "startTime": "07:36",
+      "duration": "04:37",
+      "price": 400
+    },
+    {
+      "no": "G102",
+      "startStation": "滁州",
+      "endStation": "北京南",
+      "startTime": "08:08",
+      "duration": "04:21",
+      "price": 380
+    },
+    {
+      "no": "G110",
+      "startStation": "滁州",
+      "endStation": "北京南",
+      "startTime": "09:39",
+      "duration": "03:59",
+      "price": 401
+    },
+    {
+      "no": "G112",
+      "startStation": "滁州",
+      "endStation": "北京南",
+      "startTime": "09:55",
+      "duration": "04:13",
+      "price": 422
+    },
+    {
+      "no": "G58",
+      "startStation": "滁州",
+      "endStation": "北京南",
+      "startTime": "10:31",
+      "duration": "04:12",
+      "price": 439
+    },
+    {
+      "no": "G38",
+      "startStation": "滁州",
+      "endStation": "北京南",
+      "startTime": "13:27",
+      "duration": "04:41",
+      "price": 422
+    },
+    {
+      "no": "G168",
+      "startStation": "滁州",
+      "endStation": "北京南",
+      "startTime": "13:42",
+      "duration": "04:31",
+      "price": 439
+    },
+    {
+      "no": "G132",
+      "startStation": "滁州",
+      "endStation": "北京南",
+      "startTime": "14:00",
+      "duration": "04:32",
+      "price": 422
+    },
+    {
+      "no": "G140",
+      "startStation": "滁州",
+      "endStation": "北京南",
+      "startTime": "15:28",
+      "duration": "04:12",
+      "price": 422
+    },
+    {
+      "no": "G146",
+      "startStation": "滁州",
+      "endStation": "北京南",
+      "startTime": "16:44",
+      "duration": "04:04",
+      "price": 422
+    },
+    {
+      "no": "1462",
+      "startStation": "滁州北",
+      "endStation": "北京",
+      "startTime": "17:05",
+      "duration": "17:45",
+      "price": 227.5
+    }
+  ]
+}

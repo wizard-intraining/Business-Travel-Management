@@ -1,0 +1,16 @@
+{
+  "from": "大庆",
+  "to": "吉安",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616244436984,
+  "trainList": [
+    {
+      "no": "K568",
+      "startStation": "大庆",
+      "endStation": "吉安",
+      "startTime": "18:49",
+      "duration": "41:55",
+      "price": 529.5
+    }
+  ]
+}

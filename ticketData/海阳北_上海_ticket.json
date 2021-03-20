@@ -1,0 +1,16 @@
+{
+  "from": "海阳北",
+  "to": "上海",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616245454219,
+  "trainList": [
+    {
+      "no": "D2930",
+      "startStation": "海阳北",
+      "endStation": "上海虹桥",
+      "startTime": "15:55",
+      "duration": "06:43",
+      "price": 348.5
+    }
+  ]
+}

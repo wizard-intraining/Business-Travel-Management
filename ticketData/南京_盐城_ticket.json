@@ -1,0 +1,72 @@
+{
+  "from": "南京",
+  "to": "盐城",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616239841954,
+  "trainList": [
+    {
+      "no": "C3253",
+      "startStation": "南京南",
+      "endStation": "盐城",
+      "startTime": "07:34",
+      "duration": "02:35",
+      "price": 157
+    },
+    {
+      "no": "C3153",
+      "startStation": "南京",
+      "endStation": "盐城",
+      "startTime": "09:41",
+      "duration": "02:52",
+      "price": 154
+    },
+    {
+      "no": "C3157",
+      "startStation": "南京",
+      "endStation": "盐城",
+      "startTime": "11:29",
+      "duration": "03:09",
+      "price": 146
+    },
+    {
+      "no": "C3157",
+      "startStation": "仙林",
+      "endStation": "盐城",
+      "startTime": "11:44",
+      "duration": "02:54",
+      "price": 141
+    },
+    {
+      "no": "C3165",
+      "startStation": "南京",
+      "endStation": "盐城",
+      "startTime": "13:52",
+      "duration": "02:29",
+      "price": 154
+    },
+    {
+      "no": "C3169",
+      "startStation": "南京",
+      "endStation": "盐城",
+      "startTime": "18:18",
+      "duration": "02:24",
+      "price": 154
+    },
+    {
+      "no": "T7776",
+      "startStation": "南京",
+      "endStation": "盐城",
+      "startTime": "18:49",
+      "duration": "03:49",
+      "price": null
+    },
+    {
+      "no": "C3181",
+      "startStation": "南京",
+      "endStation": "盐城",
+      "startTime": "20:19",
+      "duration": "02:24",
+      "price": 136
+    }
+  ]
+}

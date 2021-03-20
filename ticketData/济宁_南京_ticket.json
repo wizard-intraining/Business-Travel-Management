@@ -1,0 +1,16 @@
+{
+  "from": "济宁",
+  "to": "南京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616239036957,
+  "trainList": [
+    {
+      "no": "K1510",
+      "startStation": "济宁",
+      "endStation": "南京",
+      "startTime": "16:40",
+      "duration": "07:59",
+      "price": 133
+    }
+  ]
+}

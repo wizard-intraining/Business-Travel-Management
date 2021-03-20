@@ -1,0 +1,40 @@
+{
+  "from": "白城",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616233759955,
+  "trainList": [
+    {
+      "no": "K1302",
+      "startStation": "白城",
+      "endStation": "北京",
+      "startTime": "02:33",
+      "duration": "18:34",
+      "price": 288.5
+    },
+    {
+      "no": "K1190",
+      "startStation": "白城",
+      "endStation": "北京",
+      "startTime": "20:26",
+      "duration": "18:30",
+      "price": 238.5
+    },
+    {
+      "no": "K498",
+      "startStation": "白城",
+      "endStation": "北京",
+      "startTime": "21:24",
+      "duration": "15:16",
+      "price": 244.5
+    },
+    {
+      "no": "T40",
+      "startStation": "白城",
+      "endStation": "北京",
+      "startTime": "21:40",
+      "duration": "14:52",
+      "price": 261.5
+    }
+  ]
+}

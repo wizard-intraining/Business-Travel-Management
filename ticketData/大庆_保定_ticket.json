@@ -1,0 +1,16 @@
+{
+  "from": "大庆",
+  "to": "保定",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616244223965,
+  "trainList": [
+    {
+      "no": "G1262",
+      "startStation": "大庆东",
+      "endStation": "保定东",
+      "startTime": "10:03",
+      "duration": "09:16",
+      "price": 600
+    }
+  ]
+}

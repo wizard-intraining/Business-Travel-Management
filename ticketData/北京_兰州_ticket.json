@@ -1,0 +1,80 @@
+{
+  "from": "北京",
+  "to": "兰州",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616235425955,
+  "trainList": [
+    {
+      "no": "G437",
+      "startStation": "北京西",
+      "endStation": "兰州西",
+      "startTime": "06:26",
+      "duration": "07:12",
+      "price": 700
+    },
+    {
+      "no": "G429",
+      "startStation": "北京西",
+      "endStation": "兰州西",
+      "startTime": "10:45",
+      "duration": "09:09",
+      "price": 700
+    },
+    {
+      "no": "T175",
+      "startStation": "北京西",
+      "endStation": "兰州",
+      "startTime": "13:05",
+      "duration": "18:26",
+      "price": 322.5
+    },
+    {
+      "no": "Z55",
+      "startStation": "北京西",
+      "endStation": "兰州",
+      "startTime": "14:58",
+      "duration": "16:50",
+      "price": 322.5
+    },
+    {
+      "no": "Z129",
+      "startStation": "北京西",
+      "endStation": "兰州",
+      "startTime": "15:57",
+      "duration": "18:45",
+      "price": 363
+    },
+    {
+      "no": "Z151",
+      "startStation": "北京西",
+      "endStation": "兰州",
+      "startTime": "16:03",
+      "duration": "19:25",
+      "price": 363
+    },
+    {
+      "no": "Z21",
+      "startStation": "北京西",
+      "endStation": "兰州",
+      "startTime": "20:00",
+      "duration": "16:14",
+      "price": 322.5
+    },
+    {
+      "no": "K885",
+      "startStation": "北京",
+      "endStation": "兰州",
+      "startTime": "23:43",
+      "duration": "29:09",
+      "price": 353
+    },
+    {
+      "no": "K885",
+      "startStation": "北京",
+      "endStation": "兰州西",
+      "startTime": "23:43",
+      "duration": "29:39",
+      "price": 353
+    }
+  ]
+}

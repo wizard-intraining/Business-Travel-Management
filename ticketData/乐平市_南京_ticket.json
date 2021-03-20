@@ -1,0 +1,16 @@
+{
+  "from": "乐平市",
+  "to": "南京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616239807957,
+  "trainList": [
+    {
+      "no": "T152",
+      "startStation": "乐平市",
+      "endStation": "南京",
+      "startTime": "10:20",
+      "duration": "11:52",
+      "price": 144
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "from": "南京",
+  "to": "大庆",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616238963956,
+  "trainList": [
+    {
+      "no": "K48",
+      "startStation": "南京",
+      "endStation": "大庆西",
+      "startTime": "20:48",
+      "duration": "33:18",
+      "price": 426
+    }
+  ]
+}

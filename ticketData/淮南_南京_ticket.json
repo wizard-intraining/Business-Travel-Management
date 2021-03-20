@@ -1,0 +1,152 @@
+{
+  "from": "淮南",
+  "to": "南京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616243183959,
+  "trainList": [
+    {
+      "no": "G7477",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "08:02",
+      "duration": "01:29",
+      "price": 104
+    },
+    {
+      "no": "G7787",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "08:15",
+      "duration": "01:21",
+      "price": 104
+    },
+    {
+      "no": "G7221",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "08:28",
+      "duration": "01:23",
+      "price": 107
+    },
+    {
+      "no": "G7681",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "08:33",
+      "duration": "01:34",
+      "price": 104
+    },
+    {
+      "no": "G1763",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "08:38",
+      "duration": "01:24",
+      "price": 104
+    },
+    {
+      "no": "G7181",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "09:46",
+      "duration": "01:22",
+      "price": 107
+    },
+    {
+      "no": "G2807",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "11:59",
+      "duration": "01:33",
+      "price": 107
+    },
+    {
+      "no": "G3101",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "12:16",
+      "duration": "01:30",
+      "price": 107
+    },
+    {
+      "no": "G7571",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "12:39",
+      "duration": "01:22",
+      "price": 104
+    },
+    {
+      "no": "G2811",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "12:55",
+      "duration": "01:22",
+      "price": 107
+    },
+    {
+      "no": "G7751",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "13:42",
+      "duration": "01:27",
+      "price": 107
+    },
+    {
+      "no": "K8365",
+      "startStation": "淮南",
+      "endStation": "南京",
+      "startTime": "14:26",
+      "duration": "04:19",
+      "price": null
+    },
+    {
+      "no": "G7371",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "14:36",
+      "duration": "01:22",
+      "price": 107
+    },
+    {
+      "no": "G1955",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "14:47",
+      "duration": "01:22",
+      "price": 108
+    },
+    {
+      "no": "G7267",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "15:27",
+      "duration": "01:40",
+      "price": 104
+    },
+    {
+      "no": "G7795",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "15:52",
+      "duration": "01:24",
+      "price": 107
+    },
+    {
+      "no": "G7275",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "19:07",
+      "duration": "01:23",
+      "price": 107
+    },
+    {
+      "no": "G3179",
+      "startStation": "淮南南",
+      "endStation": "南京南",
+      "startTime": "19:17",
+      "duration": "01:39",
+      "price": 107
+    }
+  ]
+}

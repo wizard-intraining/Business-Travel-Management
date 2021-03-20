@@ -1,0 +1,24 @@
+{
+  "from": "南京",
+  "to": "吉安",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616239814960,
+  "trainList": [
+    {
+      "no": "K527",
+      "startStation": "南京",
+      "endStation": "吉安",
+      "startTime": "14:38",
+      "duration": "17:02",
+      "price": 280.5
+    },
+    {
+      "no": "K33",
+      "startStation": "南京",
+      "endStation": "吉安",
+      "startTime": "16:24",
+      "duration": "13:35",
+      "price": 194
+    }
+  ]
+}

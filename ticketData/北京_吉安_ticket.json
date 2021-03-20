@@ -1,0 +1,72 @@
+{
+  "from": "北京",
+  "to": "吉安",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616237874905,
+  "trainList": [
+    {
+      "no": "Z181",
+      "startStation": "北京",
+      "endStation": "吉安",
+      "startTime": "03:36",
+      "duration": "16:17",
+      "price": 337
+    },
+    {
+      "no": "G485",
+      "startStation": "北京西",
+      "endStation": "吉安西",
+      "startTime": "07:03",
+      "duration": "10:24",
+      "price": 901.5
+    },
+    {
+      "no": "G491",
+      "startStation": "北京西",
+      "endStation": "吉安西",
+      "startTime": "12:33",
+      "duration": "08:59",
+      "price": 724.5
+    },
+    {
+      "no": "K1453",
+      "startStation": "北京西",
+      "endStation": "吉安",
+      "startTime": "12:51",
+      "duration": "20:38",
+      "price": 337
+    },
+    {
+      "no": "K571",
+      "startStation": "北京西",
+      "endStation": "吉安",
+      "startTime": "16:53",
+      "duration": "21:01",
+      "price": 337
+    },
+    {
+      "no": "D733",
+      "startStation": "北京西",
+      "endStation": "吉安",
+      "startTime": "18:35",
+      "duration": "14:10",
+      "price": 277
+    },
+    {
+      "no": "D727",
+      "startStation": "北京西",
+      "endStation": "吉安",
+      "startTime": "19:59",
+      "duration": "13:56",
+      "price": 257
+    },
+    {
+      "no": "K105",
+      "startStation": "北京西",
+      "endStation": "吉安",
+      "startTime": "23:18",
+      "duration": "19:14",
+      "price": 337
+    }
+  ]
+}

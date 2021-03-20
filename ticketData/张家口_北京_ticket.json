@@ -1,0 +1,392 @@
+{
+  "from": "张家口",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616234088164,
+  "trainList": [
+    {
+      "no": "K598",
+      "startStation": "张家口",
+      "endStation": "北京西",
+      "startTime": "01:33",
+      "duration": "03:21",
+      "price": 74.5
+    },
+    {
+      "no": "K574",
+      "startStation": "张家口",
+      "endStation": "北京西",
+      "startTime": "05:35",
+      "duration": "03:26",
+      "price": 74.5
+    },
+    {
+      "no": "K396",
+      "startStation": "张家口",
+      "endStation": "北京",
+      "startTime": "06:07",
+      "duration": "03:42",
+      "price": 75.5
+    },
+    {
+      "no": "Z180",
+      "startStation": "张家口",
+      "endStation": "北京西",
+      "startTime": "06:26",
+      "duration": "03:29",
+      "price": 74.5
+    },
+    {
+      "no": "K1178",
+      "startStation": "张家口",
+      "endStation": "北京",
+      "startTime": "07:13",
+      "duration": "04:27",
+      "price": 75.5
+    },
+    {
+      "no": "G7872",
+      "startStation": "张家口",
+      "endStation": "北京北",
+      "startTime": "07:20",
+      "duration": "01:10",
+      "price": 96
+    },
+    {
+      "no": "K886",
+      "startStation": "张家口",
+      "endStation": "北京",
+      "startTime": "07:48",
+      "duration": "03:37",
+      "price": 75.5
+    },
+    {
+      "no": "G2502",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "08:09",
+      "duration": "01:01",
+      "price": 90
+    },
+    {
+      "no": "G2404",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "08:46",
+      "duration": "01:00",
+      "price": 83
+    },
+    {
+      "no": "G2410",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "10:49",
+      "duration": "00:59",
+      "price": 83
+    },
+    {
+      "no": "G2484",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "11:11",
+      "duration": "00:55",
+      "price": 90
+    },
+    {
+      "no": "Y536",
+      "startStation": "张家口",
+      "endStation": "北京",
+      "startTime": "11:21",
+      "duration": "03:29",
+      "price": 75.5
+    },
+    {
+      "no": "G2508",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "11:29",
+      "duration": "01:00",
+      "price": 86
+    },
+    {
+      "no": "G2412",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "11:51",
+      "duration": "00:53",
+      "price": 90
+    },
+    {
+      "no": "G2412",
+      "startStation": "张家口",
+      "endStation": "北京北",
+      "startTime": "11:51",
+      "duration": "01:10",
+      "price": 96
+    },
+    {
+      "no": "G2414",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "12:24",
+      "duration": "00:55",
+      "price": 86
+    },
+    {
+      "no": "G2510",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "12:31",
+      "duration": "01:01",
+      "price": 83
+    },
+    {
+      "no": "G2512",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "13:31",
+      "duration": "01:00",
+      "price": 83
+    },
+    {
+      "no": "G2418",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "13:57",
+      "duration": "00:54",
+      "price": 90
+    },
+    {
+      "no": "G2418",
+      "startStation": "张家口",
+      "endStation": "北京北",
+      "startTime": "13:57",
+      "duration": "01:11",
+      "price": 96
+    },
+    {
+      "no": "G2514",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "14:37",
+      "duration": "01:06",
+      "price": 90
+    },
+    {
+      "no": "G2420",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "14:55",
+      "duration": "01:00",
+      "price": 86
+    },
+    {
+      "no": "Z284",
+      "startStation": "张家口",
+      "endStation": "北京",
+      "startTime": "15:17",
+      "duration": "03:14",
+      "price": 75.5
+    },
+    {
+      "no": "G2422",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "15:22",
+      "duration": "01:01",
+      "price": 83
+    },
+    {
+      "no": "G2424",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "15:42",
+      "duration": "00:59",
+      "price": 86
+    },
+    {
+      "no": "G2424",
+      "startStation": "张家口",
+      "endStation": "北京北",
+      "startTime": "15:42",
+      "duration": "01:16",
+      "price": 91
+    },
+    {
+      "no": "G2486",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "15:47",
+      "duration": "01:01",
+      "price": 90
+    },
+    {
+      "no": "G2486",
+      "startStation": "张家口",
+      "endStation": "北京北",
+      "startTime": "15:47",
+      "duration": "01:17",
+      "price": 96
+    },
+    {
+      "no": "K42",
+      "startStation": "张家口",
+      "endStation": "北京",
+      "startTime": "16:06",
+      "duration": "03:39",
+      "price": 75.5
+    },
+    {
+      "no": "G2426",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "16:09",
+      "duration": "00:55",
+      "price": 86
+    },
+    {
+      "no": "G2516",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "16:42",
+      "duration": "00:53",
+      "price": 90
+    },
+    {
+      "no": "G2516",
+      "startStation": "张家口",
+      "endStation": "北京北",
+      "startTime": "16:42",
+      "duration": "01:10",
+      "price": 96
+    },
+    {
+      "no": "G2488",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "16:48",
+      "duration": "01:01",
+      "price": 86
+    },
+    {
+      "no": "G2434",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "18:07",
+      "duration": "00:59",
+      "price": 83
+    },
+    {
+      "no": "G2434",
+      "startStation": "张家口",
+      "endStation": "北京北",
+      "startTime": "18:07",
+      "duration": "01:16",
+      "price": 88
+    },
+    {
+      "no": "G2436",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "18:48",
+      "duration": "01:01",
+      "price": 79
+    },
+    {
+      "no": "G2520",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "19:04",
+      "duration": "01:04",
+      "price": 79
+    },
+    {
+      "no": "G2520",
+      "startStation": "张家口",
+      "endStation": "北京北",
+      "startTime": "19:04",
+      "duration": "01:20",
+      "price": 84
+    },
+    {
+      "no": "G2522",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "20:03",
+      "duration": "01:00",
+      "price": 77
+    },
+    {
+      "no": "G2490",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "20:33",
+      "duration": "00:54",
+      "price": 83
+    },
+    {
+      "no": "G2490",
+      "startStation": "张家口",
+      "endStation": "北京北",
+      "startTime": "20:33",
+      "duration": "01:10",
+      "price": 88
+    },
+    {
+      "no": "G7882",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "21:02",
+      "duration": "00:55",
+      "price": 72
+    },
+    {
+      "no": "G2440",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "21:15",
+      "duration": "01:00",
+      "price": 72
+    },
+    {
+      "no": "G2442",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "21:26",
+      "duration": "00:55",
+      "price": 72
+    },
+    {
+      "no": "G2444",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "21:39",
+      "duration": "00:47",
+      "price": 72
+    },
+    {
+      "no": "G2446",
+      "startStation": "张家口",
+      "endStation": "清河",
+      "startTime": "22:08",
+      "duration": "00:47",
+      "price": 72
+    },
+    {
+      "no": "G2446",
+      "startStation": "张家口",
+      "endStation": "北京北",
+      "startTime": "22:08",
+      "duration": "01:04",
+      "price": 77
+    },
+    {
+      "no": "Z184",
+      "startStation": "张家口",
+      "endStation": "北京",
+      "startTime": "23:50",
+      "duration": "03:18",
+      "price": 75.5
+    }
+  ]
+}

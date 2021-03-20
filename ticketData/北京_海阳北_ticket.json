@@ -1,0 +1,16 @@
+{
+  "from": "北京",
+  "to": "海阳北",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616233907713,
+  "trainList": [
+    {
+      "no": "G471",
+      "startStation": "北京南",
+      "endStation": "海阳北",
+      "startTime": "07:04",
+      "duration": "05:08",
+      "price": 338
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "from": "大庆",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616233715970,
+  "trainList": [
+    {
+      "no": "K1304",
+      "startStation": "大庆西",
+      "endStation": "北京",
+      "startTime": "09:09",
+      "duration": "23:50",
+      "price": 322.5
+    },
+    {
+      "no": "D30",
+      "startStation": "大庆东",
+      "endStation": "北京",
+      "startTime": "13:37",
+      "duration": "08:39",
+      "price": 360.5
+    },
+    {
+      "no": "Z84",
+      "startStation": "大庆东",
+      "endStation": "北京",
+      "startTime": "19:46",
+      "duration": "12:38",
+      "price": null
+    }
+  ]
+}

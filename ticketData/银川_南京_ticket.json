@@ -1,0 +1,40 @@
+{
+  "from": "银川",
+  "to": "南京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616243916959,
+  "trainList": [
+    {
+      "no": "K1331",
+      "startStation": "银川",
+      "endStation": "南京",
+      "startTime": "12:20",
+      "duration": "23:59",
+      "price": 370
+    },
+    {
+      "no": "K1334",
+      "startStation": "灵武",
+      "endStation": "南京",
+      "startTime": "13:01",
+      "duration": "23:18",
+      "price": 363
+    },
+    {
+      "no": "K1805",
+      "startStation": "银川",
+      "endStation": "南京",
+      "startTime": "17:34",
+      "duration": "28:34",
+      "price": 370
+    },
+    {
+      "no": "K359",
+      "startStation": "银川",
+      "endStation": "南京",
+      "startTime": "20:34",
+      "duration": "29:30",
+      "price": 381
+    }
+  ]
+}

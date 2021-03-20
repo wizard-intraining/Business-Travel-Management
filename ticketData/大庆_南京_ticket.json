@@ -1,0 +1,16 @@
+{
+  "from": "大庆",
+  "to": "南京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616238970955,
+  "trainList": [
+    {
+      "no": "K50",
+      "startStation": "大庆西",
+      "endStation": "南京",
+      "startTime": "18:08",
+      "duration": "31:23",
+      "price": 426
+    }
+  ]
+}

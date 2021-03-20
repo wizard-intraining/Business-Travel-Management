@@ -1,0 +1,16 @@
+{
+  "from": "海阳北",
+  "to": "济宁",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616245242814,
+  "trainList": [
+    {
+      "no": "5018",
+      "startStation": "徐家店",
+      "endStation": "济宁",
+      "startTime": "10:13",
+      "duration": "08:28",
+      "price": 130
+    }
+  ]
+}

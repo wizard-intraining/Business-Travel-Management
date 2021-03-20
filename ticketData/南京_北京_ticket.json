@@ -1,0 +1,456 @@
+{
+  "from": "南京",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616233350957,
+  "trainList": [
+    {
+      "no": "K102",
+      "startStation": "南京",
+      "endStation": "北京",
+      "startTime": "00:58",
+      "duration": "14:47",
+      "price": 254.5
+    },
+    {
+      "no": "G204",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "07:16",
+      "duration": "04:57",
+      "price": 422
+    },
+    {
+      "no": "G102",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "07:48",
+      "duration": "04:41",
+      "price": 401
+    },
+    {
+      "no": "G104",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "08:02",
+      "duration": "04:31",
+      "price": 445
+    },
+    {
+      "no": "G6",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "08:13",
+      "duration": "03:23",
+      "price": 482
+    },
+    {
+      "no": "G34",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "08:33",
+      "duration": "04:34",
+      "price": 445
+    },
+    {
+      "no": "G106",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "08:37",
+      "duration": "04:35",
+      "price": 423
+    },
+    {
+      "no": "G20",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "08:58",
+      "duration": "03:22",
+      "price": 482
+    },
+    {
+      "no": "G8",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "09:02",
+      "duration": "03:22",
+      "price": 482
+    },
+    {
+      "no": "G108",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "09:06",
+      "duration": "04:16",
+      "price": 423
+    },
+    {
+      "no": "G110",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "09:16",
+      "duration": "04:22",
+      "price": 423
+    },
+    {
+      "no": "G112",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "09:35",
+      "duration": "04:33",
+      "price": 445
+    },
+    {
+      "no": "G114",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "09:50",
+      "duration": "04:23",
+      "price": 445
+    },
+    {
+      "no": "G2",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "10:02",
+      "duration": "03:26",
+      "price": 482
+    },
+    {
+      "no": "G58",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "10:11",
+      "duration": "04:32",
+      "price": 464
+    },
+    {
+      "no": "G36",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "10:29",
+      "duration": "04:24",
+      "price": 445
+    },
+    {
+      "no": "G10",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "11:02",
+      "duration": "03:26",
+      "price": 482
+    },
+    {
+      "no": "G116",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "11:09",
+      "duration": "04:14",
+      "price": 445
+    },
+    {
+      "no": "G46",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "11:17",
+      "duration": "04:26",
+      "price": 482
+    },
+    {
+      "no": "G126",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "11:37",
+      "duration": "04:21",
+      "price": 445
+    },
+    {
+      "no": "G124",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "12:09",
+      "duration": "04:08",
+      "price": 464
+    },
+    {
+      "no": "G122",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "12:13",
+      "duration": "04:30",
+      "price": 445
+    },
+    {
+      "no": "G274",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "12:28",
+      "duration": "04:37",
+      "price": 464
+    },
+    {
+      "no": "G130",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "12:50",
+      "duration": "04:54",
+      "price": 445
+    },
+    {
+      "no": "G38",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "13:02",
+      "duration": "05:06",
+      "price": 445
+    },
+    {
+      "no": "G12",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "13:10",
+      "duration": "03:28",
+      "price": 482
+    },
+    {
+      "no": "G168",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "13:22",
+      "duration": "04:51",
+      "price": 464
+    },
+    {
+      "no": "G132",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "13:40",
+      "duration": "04:52",
+      "price": 445
+    },
+    {
+      "no": "G412",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "13:53",
+      "duration": "05:05",
+      "price": 421
+    },
+    {
+      "no": "G32",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "14:04",
+      "duration": "03:35",
+      "price": 482
+    },
+    {
+      "no": "G134",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "14:23",
+      "duration": "04:25",
+      "price": 464
+    },
+    {
+      "no": "G56",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "14:27",
+      "duration": "04:26",
+      "price": 445
+    },
+    {
+      "no": "G138",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "14:52",
+      "duration": "04:34",
+      "price": 464
+    },
+    {
+      "no": "G4",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "15:02",
+      "duration": "03:26",
+      "price": 482
+    },
+    {
+      "no": "G140",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "15:07",
+      "duration": "04:33",
+      "price": 445
+    },
+    {
+      "no": "G164",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "15:17",
+      "duration": "04:36",
+      "price": 464
+    },
+    {
+      "no": "G142",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "15:28",
+      "duration": "05:01",
+      "price": 445
+    },
+    {
+      "no": "G14",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "16:01",
+      "duration": "03:34",
+      "price": 482
+    },
+    {
+      "no": "1462",
+      "startStation": "南京",
+      "endStation": "北京",
+      "startTime": "16:22",
+      "duration": "18:28",
+      "price": 236.5
+    },
+    {
+      "no": "G146",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "16:24",
+      "duration": "04:24",
+      "price": 445
+    },
+    {
+      "no": "G148",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "16:47",
+      "duration": "04:26",
+      "price": 445
+    },
+    {
+      "no": "G60",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "17:02",
+      "duration": "04:27",
+      "price": 445
+    },
+    {
+      "no": "G170",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "17:14",
+      "duration": "04:04",
+      "price": 445
+    },
+    {
+      "no": "G150",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "17:27",
+      "duration": "04:33",
+      "price": 443
+    },
+    {
+      "no": "G152",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "17:34",
+      "duration": "04:38",
+      "price": 445
+    },
+    {
+      "no": "G16",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "18:01",
+      "duration": "03:35",
+      "price": 482
+    },
+    {
+      "no": "G154",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "18:41",
+      "duration": "04:12",
+      "price": 421
+    },
+    {
+      "no": "G156",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "18:46",
+      "duration": "04:21",
+      "price": 423
+    },
+    {
+      "no": "G44",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "18:52",
+      "duration": "04:20",
+      "price": 443
+    },
+    {
+      "no": "G158",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "19:01",
+      "duration": "04:28",
+      "price": 401
+    },
+    {
+      "no": "G18",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "19:08",
+      "duration": "03:28",
+      "price": 482
+    },
+    {
+      "no": "G22",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "20:02",
+      "duration": "03:16",
+      "price": 482
+    },
+    {
+      "no": "G40",
+      "startStation": "南京南",
+      "endStation": "北京南",
+      "startTime": "20:06",
+      "duration": "03:17",
+      "price": 482
+    },
+    {
+      "no": "D718",
+      "startStation": "南京",
+      "endStation": "北京",
+      "startTime": "21:38",
+      "duration": "09:29",
+      "price": 197
+    },
+    {
+      "no": "T110",
+      "startStation": "南京",
+      "endStation": "北京",
+      "startTime": "22:07",
+      "duration": "12:01",
+      "price": 254.5
+    },
+    {
+      "no": "D706",
+      "startStation": "南京",
+      "endStation": "北京",
+      "startTime": "23:56",
+      "duration": "09:28",
+      "price": 197
+    }
+  ]
+}

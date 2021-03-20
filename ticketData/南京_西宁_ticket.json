@@ -1,0 +1,24 @@
+{
+  "from": "南京",
+  "to": "西宁",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616239478966,
+  "trainList": [
+    {
+      "no": "Z376",
+      "startStation": "南京",
+      "endStation": "西宁",
+      "startTime": "12:47",
+      "duration": "24:20",
+      "price": 399
+    },
+    {
+      "no": "Z164",
+      "startStation": "南京",
+      "endStation": "西宁",
+      "startTime": "23:01",
+      "duration": "22:01",
+      "price": 399
+    }
+  ]
+}

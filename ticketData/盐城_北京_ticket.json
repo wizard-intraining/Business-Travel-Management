@@ -1,0 +1,64 @@
+{
+  "from": "盐城",
+  "to": "北京",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616237989769,
+  "trainList": [
+    {
+      "no": "G886",
+      "startStation": "盐城",
+      "endStation": "北京南",
+      "startTime": "09:36",
+      "duration": "05:01",
+      "price": 433
+    },
+    {
+      "no": "G888",
+      "startStation": "盐城大丰",
+      "endStation": "北京南",
+      "startTime": "14:38",
+      "duration": "05:10",
+      "price": 447
+    },
+    {
+      "no": "G888",
+      "startStation": "盐城",
+      "endStation": "北京南",
+      "startTime": "14:50",
+      "duration": "04:58",
+      "price": 433
+    },
+    {
+      "no": "G482",
+      "startStation": "盐城",
+      "endStation": "北京南",
+      "startTime": "14:55",
+      "duration": "06:57",
+      "price": 480
+    },
+    {
+      "no": "Z140",
+      "startStation": "盐城",
+      "endStation": "北京",
+      "startTime": "20:03",
+      "duration": "11:34",
+      "price": null
+    },
+    {
+      "no": "Z52",
+      "startStation": "盐城",
+      "endStation": "北京",
+      "startTime": "20:35",
+      "duration": "10:50",
+      "price": 254.5
+    },
+    {
+      "no": "T216",
+      "startStation": "盐城",
+      "endStation": "北京",
+      "startTime": "21:33",
+      "duration": "12:42",
+      "price": 254.5
+    }
+  ]
+}

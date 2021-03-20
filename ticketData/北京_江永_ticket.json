@@ -1,0 +1,16 @@
+{
+  "from": "北京",
+  "to": "江永",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616237788054,
+  "trainList": [
+    {
+      "no": "T289",
+      "startStation": "北京西",
+      "endStation": "江永",
+      "startTime": "22:00",
+      "duration": "21:56",
+      "price": 389
+    }
+  ]
+}

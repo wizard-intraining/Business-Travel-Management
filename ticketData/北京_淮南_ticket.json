@@ -1,0 +1,72 @@
+{
+  "from": "北京",
+  "to": "淮南",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616238499956,
+  "trainList": [
+    {
+      "no": "G355",
+      "startStation": "北京南",
+      "endStation": "淮南东",
+      "startTime": "08:40",
+      "duration": "04:16",
+      "price": 392.5
+    },
+    {
+      "no": "G263",
+      "startStation": "北京南",
+      "endStation": "淮南东",
+      "startTime": "08:45",
+      "duration": "03:46",
+      "price": 392.5
+    },
+    {
+      "no": "G325",
+      "startStation": "北京南",
+      "endStation": "淮南东",
+      "startTime": "12:05",
+      "duration": "03:59",
+      "price": 392.5
+    },
+    {
+      "no": "K1071",
+      "startStation": "北京西",
+      "endStation": "淮南",
+      "startTime": "12:10",
+      "duration": "12:14",
+      "price": 222.5
+    },
+    {
+      "no": "G161",
+      "startStation": "北京南",
+      "endStation": "淮南东",
+      "startTime": "15:15",
+      "duration": "03:59",
+      "price": 408.5
+    },
+    {
+      "no": "G351",
+      "startStation": "北京南",
+      "endStation": "淮南东",
+      "startTime": "15:30",
+      "duration": "04:06",
+      "price": 392.5
+    },
+    {
+      "no": "G267",
+      "startStation": "北京南",
+      "endStation": "淮南东",
+      "startTime": "17:31",
+      "duration": "04:18",
+      "price": 392.5
+    },
+    {
+      "no": "G269",
+      "startStation": "北京南",
+      "endStation": "淮南东",
+      "startTime": "19:14",
+      "duration": "03:45",
+      "price": 392.5
+    }
+  ]
+}

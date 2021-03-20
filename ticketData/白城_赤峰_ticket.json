@@ -1,0 +1,16 @@
+{
+  "from": "白城",
+  "to": "赤峰",
+  "trainDate": "2021-03-25",
+  "timestamp": 1616244875960,
+  "trainList": [
+    {
+      "no": "K1190",
+      "startStation": "白城",
+      "endStation": "赤峰南",
+      "startTime": "20:26",
+      "duration": "07:56",
+      "price": 152
+    }
+  ]
+}

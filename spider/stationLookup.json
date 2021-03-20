@@ -1,122 +1,32 @@
-﻿{
-  "北京": {
-    "stationName": "北京",
-    "stationCode": "BJP"
-  },
-  "南京": {
-    "stationName": "南京",
-    "stationCode": "NJH"
-  },
-  "黑龙江省大庆市": {
-    "stationName": "大庆",
-    "stationCode": "DZX"
-  },
-  "吉林省白城市": {
-    "stationName": "白城",
-    "stationCode": "BCT"
-  },
-  "辽宁省朝阳市": {
-    "stationName": "辽宁朝阳",
-    "stationCode": "VET"
-  },
-  "山东省烟台市海阳市": {
-    "stationName": "海阳北",
-    "stationCode": "HEK"
-  },
-  "山东省济宁市汶上县": {
-    "stationName": "济宁",
-    "stationCode": "JIK"
-  },
-  "河北省张家口市张北县": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "河北省保定市阜平县": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "陕西省西安市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "甘肃省兰州市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "青海省海东市互助县": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "青海省西宁市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "贵州省都匀市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "贵州省毕节市威宁县": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "重庆市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "湖南省永州市江永县": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "广西自治区梧州市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "广东省珠海市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "海南省昌江自治县": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "江西省共青城市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "江西省景德镇市乐平市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "江西省吉安市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "江苏省盐城市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "上海市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "安徽淮南": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "安徽滁州": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "宁夏自治区银川市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "内蒙古自治区赤峰市": {
-    "stationName": "",
-    "stationCode": ""
-  },
-  "福建省福州市": {
-    "stationName": "",
-    "stationCode": ""
-  }
+{
+  "北京": "北京",
+  "南京": "南京",
+  "黑龙江省大庆市": "大庆",
+  "吉林省白城市": "白城",
+  "辽宁省朝阳市": "辽宁朝阳",
+  "山东省烟台市海阳市": "海阳北",
+  "山东省济宁市汶上县": "济宁",
+  "河北省张家口市张北县": "张家口",
+  "河北省保定市阜平县": "保定",
+  "陕西省西安市": "西安",
+  "甘肃省兰州市": "兰州",
+  "青海省海东市互助县": "平安驿",
+  "青海省西宁市": "西宁",
+  "贵州省都匀市": "都匀",
+  "贵州省毕节市威宁县": "昭通",
+  "重庆市": "重庆",
+  "湖南省永州市江永县": "江永",
+  "广西自治区梧州市": "梧州",
+  "广东省珠海市": "珠海",
+  "海南省昌江自治县": "棋子湾",
+  "江西省共青城市": "共青城",
+  "江西省景德镇市乐平市": "乐平市",
+  "江西省吉安市": "吉安",
+  "江苏省盐城市": "盐城",
+  "上海市": "上海",
+  "安徽淮南": "淮南",
+  "安徽滁州": "滁州",
+  "宁夏自治区银川市": "银川",
+  "内蒙古自治区赤峰市": "赤峰",
+  "福建省福州市": "福州"
 }
